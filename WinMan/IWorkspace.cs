@@ -3,26 +3,28 @@ using System.Collections.Generic;
 
 namespace WinMan
 {
+    public delegate void VirtualDesktopChangedEventHandler(IVirtualDesktop oldVirtualDesktop);
+
+    public delegate void PresenceChangedEventHandler(IWindow sender);
+
+    public delegate void UnhandledExceptionEventHandler(Exception exception);
+
     public interface IWorkspace : IDisposable
     {
-        event Action<int> CurrentDesktopChanged;
-        event Action<IWindow> WindowManaging;
-        event Action<IWindow> WindowAdded;
-        event Action<IWindow> WindowRemoved;
-        event Action<Exception> UnhandledException;
+        event VirtualDesktopChangedEventHandler VirtualDesktopChanged;
+        event PresenceChangedEventHandler WindowManaging;
+        event PresenceChangedEventHandler WindowAdded;
+        event PresenceChangedEventHandler WindowRemoved;
+        event UnhandledExceptionEventHandler UnhandledException;
 
-        IEnumerable<IWindow> GetSnapshot();
-        IEnumerable<IWindow> GetSnapshot(int desktop);
+        IReadOnlyList<IWindow> GetSnapshot();
 
         void Open();
 
-        int DesktopCount { get; }
-        int DesktopRows { get; }
+        Rectangle WorkArea { get; }
 
-        Point GetDimensions();
         IWindow ActiveWindow { get; }
-        int CurrentDesktop { get; }
 
-        void SwitchToDesktop(int desktop);
+        IVirtualDesktop ActiveDesktop { get; }
     }
 }

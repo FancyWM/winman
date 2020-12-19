@@ -2,48 +2,126 @@
 
 namespace WinMan
 {
-    public interface IWindow
+    public enum WindowState
     {
-        event Action<IWindow> Moving;
-        event Action<IWindow> Moved;
+        Minimized,
+        Restored,
+        Maximized,
+    }
 
-        event Action<IWindow> Minimizing;
-        event Action<IWindow> Minimized;
+    public delegate void WindowUpdatedEventHandler(IWindow sender);
+    public delegate void LocationChangedEventHandler(IWindow sender, Rectangle oldLocation);
+    public delegate void StateChangedEventHandler(IWindow sender, WindowState oldState);
 
-        event Action<IWindow> Restored;
-        event Action<IWindow, bool, bool> Maximized;
-        event Action<IWindow> Activated;
-        event Action<IWindow> FullScreenEntered;
-        event Action<IWindow> FullScreenExited;
+    public interface IWindow : IEquatable<IWindow>
+    {
+        /// <summary>
+        /// Event emitted when the window location starts changing as a result of 
+        /// user interaction (resize or move).
+        /// </summary>
+        event LocationChangedEventHandler LocationChangeStart;
 
-        event Action<IWindow> Removed;
+        /// <summary>
+        /// Event emitted when the user interaction driving the resize or move of 
+        /// the window ends.
+        /// </summary>
+        event LocationChangedEventHandler LocationChangeEnd;
+        
+        /// <summary>
+        /// The location of the window has changed. This might be due to a user interaction
+        /// or through some form of scripted behaviour. 
+        /// </summary>
+        event LocationChangedEventHandler LocationChanged;
 
-        string Title { get; set; }
-        Point Position { get; }
-        Point Size { get; }
+        /// <summary>
+        /// The state of the window has changed.
+        /// </summary>
+        event StateChangedEventHandler StateChanged;
 
+        /// <summary>
+        /// The IsTopmost property of the window has changed.
+        /// </summary>
+        event WindowUpdatedEventHandler TopmostChanged;
+
+        /// <summary>
+        /// The window became the foreground window.
+        /// </summary>
+        event WindowUpdatedEventHandler Activated;
+
+        /// <summary>
+        /// The window was closed or is no longer visible. 
+        /// </summary>
+        event WindowUpdatedEventHandler Removed;
+
+        /// <summary>
+        /// The internal synchronisation object.
+        /// </summary>
+        object SyncRoot { get; }
+
+        /// <summary>
+        /// The IWorkspace which returned this IWindow instance.
+        /// </summary>
+        IWorkspace Workspace { get; }
+        /// <summary>
+        /// The title of the window.
+        /// </summary>
+        string Title { get; }
+        /// <summary>
+        /// The client rectangle of the window, relative to the workarea.
+        /// </summary>
+        Rectangle Location { get; }
+        /// <summary>
+        /// The current state of the window.
+        /// </summary>
+        WindowState State { get; }
+        /// <summary>
+        /// True if the window is always drawn above other non-topmost windows.
+        /// </summary>
+        bool IsTopmost { get; }
+        /// <summary>
+        /// True if this instance is a valid reference to an OS window.
+        /// </summary>
+        bool IsValid { get; }
+        /// <summary>
+        /// The OS-specific window handle.
+        /// </summary>
+        IntPtr Handle { get; }
+
+        /// <summary>
+        /// Sends a close event to the window.
+        /// </summary>
         void Close();
-        void Move(int x, int y);
-        void Resize(int w, int h);
-        void SetGeometry(int x, int y, int w, int h);
+        
+        /// <summary>
+        /// Changes the location of the window.
+        /// </summary>
+        /// <param name="newLocation"></param>
+        void SetLocation(Rectangle newLocation);
+        /// <summary>
+        /// Changes the state of the window.
+        /// </summary>
+        /// <param name="state"></param>
+        void SetState(WindowState state);
+        /// <summary>
+        /// Changes the topmost property of the window.
+        /// </summary>
+        /// <param name="topmost"></param>
+        void SetTopmost(bool topmost);
 
-        bool IsDialog { get; }
+        /// <summary>
+        /// Activates the window.
+        /// </summary>
+        void Focus();
+
+        /// <summary>
+        /// Returns the parent window for the current window.
+        /// </summary>
         IWindow Parent { get; }
 
-        void Restore();
-        void EnterFullScreen();
-        void ExitFullScreen();
-        
-        bool IsMinimized { get; }
-        bool CanMinimize { get; }
-        bool CanMaxmimize { get; }
-        bool CanResize { get; }
-        bool CanMove { get; }
-        bool CanClose { get; }
-        bool IsFullScreen { get; }
-        bool CanFullScreen { get; }
-
-        int Desktop { get; }
+        /// <summary>
+        /// Returns the 0-based index of the monitor to which
+        /// the window is assigned.
+        /// </summary>
         int Monitor { get; }
     }
 }
