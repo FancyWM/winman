@@ -49,9 +49,19 @@ namespace WinMan
         event WindowUpdatedEventHandler Activated;
 
         /// <summary>
-        /// The window was closed or is no longer visible. 
+        /// The window was added to the workspace.
+        /// </summary>
+        event WindowUpdatedEventHandler Added;
+
+        /// <summary>
+        /// The window was removed from the workspace.
         /// </summary>
         event WindowUpdatedEventHandler Removed;
+
+        /// <summary>
+        /// The window instance was destroyed.
+        /// </summary>
+        event WindowUpdatedEventHandler Destroyed;
 
         /// <summary>
         /// The internal synchronisation object.

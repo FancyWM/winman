@@ -84,6 +84,7 @@
     <Compile Include="Implementation\Win32\COMInterfaces.cs" />
     <Compile Include="Implementation\Win32\ExceptionExtensions.cs" />
     <Compile Include="Implementation\Win32\NativeMethods.cs" />
+    <Compile Include="Implementation\Win32\VirtualDesktop.cs" />
     <Compile Include="Implementation\Win32\Win32VirtualDesktop.cs" />
     <Compile Include="Implementation\Win32\Win32Window.cs" />
     <Compile Include="Implementation\Win32\Win32Workspace.cs" />
