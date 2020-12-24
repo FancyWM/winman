@@ -81,15 +81,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementation\DummyVirtualDesktop.cs" />
-    <Compile Include="Implementation\Win32\COMInterfaces.cs" />
+    <Compile Include="Implementation\DummyVirtualDesktopManager.cs" />
     <Compile Include="Implementation\Win32\ExceptionExtensions.cs" />
     <Compile Include="Implementation\Win32\NativeMethods.cs" />
     <Compile Include="Implementation\Win32\VirtualDesktop.cs" />
     <Compile Include="Implementation\Win32\Win32VirtualDesktop.cs" />
+    <Compile Include="Implementation\Win32\Win32VirtualDesktopManager.cs" />
     <Compile Include="Implementation\Win32\Win32Window.cs" />
     <Compile Include="Implementation\Win32\Win32Workspace.cs" />
     <Compile Include="Implementation\Win32\WinEventHookHelper.cs" />
     <Compile Include="IVirtualDesktop.cs" />
+    <Compile Include="IVirtualDesktopManager.cs" />
     <Compile Include="IWorkspace.cs" />
     <Compile Include="IWindow.cs" />
     <Compile Include="Point.cs" />

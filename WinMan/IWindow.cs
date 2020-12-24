@@ -124,11 +124,6 @@ namespace WinMan
         void Focus();
 
         /// <summary>
-        /// Returns the parent window for the current window.
-        /// </summary>
-        IWindow Parent { get; }
-
-        /// <summary>
         /// Returns the 0-based index of the monitor to which
         /// the window is assigned.
         /// </summary>

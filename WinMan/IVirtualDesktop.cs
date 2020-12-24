@@ -1,17 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WinMan
+﻿namespace WinMan
 {
     public interface IVirtualDesktop
     {
+        IWorkspace Workspace { get; }
+
         bool IsCurrent { get; }
 
-        void Add(IWindow window);
+        int Index { get; }
 
-        bool Contains(IWindow window);
+        string Name { get; }
+
+        void MoveWindow(IWindow window);
+
+        bool HasWindow(IWindow window);
+
+        void SwitchTo();
+
+        void SetName(string newName);
+
+        void Remove();
+
+        event VirtualDesktopChangedEventHandler Removed;
     }
 }
