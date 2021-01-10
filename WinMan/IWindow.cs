@@ -10,8 +10,8 @@ namespace WinMan
     }
 
     public delegate void WindowUpdatedEventHandler(IWindow sender);
-    public delegate void LocationChangedEventHandler(IWindow sender, Rectangle oldLocation);
-    public delegate void StateChangedEventHandler(IWindow sender, WindowState oldState);
+    public delegate void WindowLocationChangedEventHandler(IWindow sender, Rectangle oldLocation);
+    public delegate void WindowStateChangedEventHandler(IWindow sender, WindowState oldState);
 
     public interface IWindow : IEquatable<IWindow>
     {
@@ -19,24 +19,24 @@ namespace WinMan
         /// Event emitted when the window location starts changing as a result of 
         /// user interaction (resize or move).
         /// </summary>
-        event LocationChangedEventHandler LocationChangeStart;
+        event WindowLocationChangedEventHandler LocationChangeStart;
 
         /// <summary>
         /// Event emitted when the user interaction driving the resize or move of 
         /// the window ends.
         /// </summary>
-        event LocationChangedEventHandler LocationChangeEnd;
+        event WindowLocationChangedEventHandler LocationChangeEnd;
         
         /// <summary>
         /// The location of the window has changed. This might be due to a user interaction
         /// or through some form of scripted behaviour. 
         /// </summary>
-        event LocationChangedEventHandler LocationChanged;
+        event WindowLocationChangedEventHandler LocationChanged;
 
         /// <summary>
         /// The state of the window has changed.
         /// </summary>
-        event StateChangedEventHandler StateChanged;
+        event WindowStateChangedEventHandler StateChanged;
 
         /// <summary>
         /// The IsTopmost property of the window has changed.
@@ -55,11 +55,13 @@ namespace WinMan
 
         /// <summary>
         /// The window was removed from the workspace.
+        /// IsAlive is likely to be false.
         /// </summary>
         event WindowUpdatedEventHandler Removed;
 
         /// <summary>
         /// The window instance was destroyed.
+        /// IsAlive will be false.
         /// </summary>
         event WindowUpdatedEventHandler Destroyed;
 
@@ -74,26 +76,56 @@ namespace WinMan
         IWorkspace Workspace { get; }
         /// <summary>
         /// The title of the window.
+        /// Returns string.Empty once the window is dead (IsAlive=false).
         /// </summary>
         string Title { get; }
         /// <summary>
         /// The client rectangle of the window, relative to the workarea.
+        /// Returns Rectangle.Empty once the window is dead (IsAlive=false).
         /// </summary>
         Rectangle Location { get; }
         /// <summary>
         /// The current state of the window.
+        /// Returns WindowState.Minimized once the window is dead (IsAlive=false).
         /// </summary>
         WindowState State { get; }
         /// <summary>
+        /// True if the window is resizable.
+        /// Returns false once the window is dead (IsAlive=false).
+        /// </summary>
+        bool CanResize { get; }
+        /// <summary>
+        /// True if the window can be moved.
+        /// Returns false once the window is dead (IsAlive=false).
+        /// </summary>
+        bool CanMove { get; }
+        /// <summary>
+        /// True if the window supports minimization.
+        /// Returns false once the window is dead (IsAlive=false).
+        /// </summary>
+        bool CanMinimize { get; }
+        /// <summary>
+        /// True if the window supports maximization.
+        /// Returns false once the window is dead (IsAlive=false).
+        /// </summary>
+        bool CanMaximize { get; }
+        /// <summary>
         /// True if the window is always drawn above other non-topmost windows.
+        /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
         bool IsTopmost { get; }
         /// <summary>
-        /// True if this instance is a valid reference to an OS window.
+        /// Is this the foreground window.
+        /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
-        bool IsValid { get; }
+        bool HasFocus { get; }
+        /// <summary>
+        /// Is the window instance alive.
+        /// </summary>
+        bool IsAlive { get; }
         /// <summary>
         /// The OS-specific window handle.
+        /// Returns IntPtr.Zero once the window is dead (IsAlive=false).
         /// </summary>
         IntPtr Handle { get; }
 
@@ -121,12 +153,6 @@ namespace WinMan
         /// <summary>
         /// Activates the window.
         /// </summary>
-        void Focus();
-
-        /// <summary>
-        /// Returns the 0-based index of the monitor to which
-        /// the window is assigned.
-        /// </summary>
-        int Monitor { get; }
+        void RequestFocus();
     }
 }

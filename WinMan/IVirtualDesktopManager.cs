@@ -6,7 +6,7 @@ namespace WinMan
     {
         IWorkspace Workspace { get; }
 
-        bool IsVirtualDesktopsSupported { get; }
+        bool CanManageVirtualDesktops { get; }
 
         event VirtualDesktopChangedEventHandler DesktopAdded;
         event VirtualDesktopChangedEventHandler DesktopRemoved;

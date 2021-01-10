@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinMan
 {
     public struct Rectangle : IEquatable<Rectangle>
     {
+        public static Rectangle Empty => new Rectangle();
+
         public int Left { get; }
         public int Top { get; }
         public int Right { get; }

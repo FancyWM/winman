@@ -1,4 +1,6 @@
 ﻿
+using System.Collections.Generic;
+using System.Linq;
 using WinMan.Implementation.Win32;
 
 namespace WinMan
@@ -21,6 +23,16 @@ namespace WinMan
                 }
             }
             return m_currentWorkspace;
+        }
+    }
+
+    public static class WorkspaceExtensions
+    {
+        public static IReadOnlyList<IWindow> GetCurrentDesktopSnapshot(this IWorkspace workspace)
+        {
+            return workspace.GetSnapshot()
+                .Where(workspace.VirtualDesktopManager.CurrentDesktop.HasWindow)
+                .ToList();
         }
     }
 }

@@ -5,7 +5,7 @@ namespace WinMan
 {
     public delegate void VirtualDesktopChangedEventHandler(IVirtualDesktop oldVirtualDesktop);
 
-    public delegate void PresenceChangedEventHandler(IWindow sender);
+    public delegate void WindowPresenceChangedEventHandler(IWindow sender);
 
     public delegate void ActiveChangedEventHandler(IWindow oldActiveWindow);
 
@@ -13,21 +13,23 @@ namespace WinMan
 
     public interface IWorkspace : IDisposable
     {
-        event PresenceChangedEventHandler WindowManaging;
-        event PresenceChangedEventHandler WindowAdded;
-        event PresenceChangedEventHandler WindowRemoved;
+        event WindowPresenceChangedEventHandler WindowManaging;
+        event WindowPresenceChangedEventHandler WindowAdded;
+        event WindowPresenceChangedEventHandler WindowRemoved;
         event UnhandledExceptionEventHandler UnhandledException;
-
-        IReadOnlyList<IWindow> GetSnapshot(bool currentDesktopOnly = false);
-
-        IEnumerable<IWindow> OrderByZOrder(IReadOnlyList<IWindow> windows);
-
-        void Open();
 
         Rectangle WorkArea { get; }
 
-        IWindow ActiveWindow { get; }
+        IWindow FocusedWindow { get; }
 
-        IVirtualDesktopManager VirtualDesktops { get; }
+        IVirtualDesktopManager VirtualDesktopManager { get; }
+
+        void Open();
+
+        IWindow FindWindow(IntPtr windowHandle);
+
+        IReadOnlyList<IWindow> GetSnapshot();
+
+        IEnumerable<IWindow> OrderByZOrder(IReadOnlyList<IWindow> windows);
     }
 }
