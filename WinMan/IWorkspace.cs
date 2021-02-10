@@ -20,6 +20,8 @@ namespace WinMan
 
         Rectangle WorkArea { get; }
 
+        Point CursorLocation { get; }
+
         IWindow FocusedWindow { get; }
 
         IVirtualDesktopManager VirtualDesktopManager { get; }
@@ -28,8 +30,16 @@ namespace WinMan
 
         IWindow FindWindow(IntPtr windowHandle);
 
+        IWindow UnsafeCreateFromHandle(IntPtr windowHandle);
+
         IReadOnlyList<IWindow> GetSnapshot();
 
         IEnumerable<IWindow> OrderByZOrder(IReadOnlyList<IWindow> windows);
+
+        /// <param name="destWindow"></param>
+        /// <param name="srcWindow"></param>
+        /// <returns></returns>
+        /// <exception cref="NotSupportedException"></exception>
+        ILiveThumbnail CreateLiveThumbnail(IWindow destWindow, IWindow srcWindow);
     }
 }

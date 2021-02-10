@@ -10,8 +10,8 @@ namespace WinMan
     }
 
     public delegate void WindowUpdatedEventHandler(IWindow sender);
-    public delegate void WindowLocationChangedEventHandler(IWindow sender, Rectangle oldLocation);
-    public delegate void WindowStateChangedEventHandler(IWindow sender, WindowState oldState);
+    public delegate void WindowPositionChangedEventHandler(IWindow sender, Rectangle prevPosition);
+    public delegate void WindowStateChangedEventHandler(IWindow sender, WindowState prevState);
 
     public interface IWindow : IEquatable<IWindow>
     {
@@ -19,19 +19,19 @@ namespace WinMan
         /// Event emitted when the window location starts changing as a result of 
         /// user interaction (resize or move).
         /// </summary>
-        event WindowLocationChangedEventHandler LocationChangeStart;
+        event WindowPositionChangedEventHandler PositionChangeStart;
 
         /// <summary>
         /// Event emitted when the user interaction driving the resize or move of 
         /// the window ends.
         /// </summary>
-        event WindowLocationChangedEventHandler LocationChangeEnd;
+        event WindowPositionChangedEventHandler PositionChangeEnd;
         
         /// <summary>
         /// The location of the window has changed. This might be due to a user interaction
         /// or through some form of scripted behaviour. 
         /// </summary>
-        event WindowLocationChangedEventHandler LocationChanged;
+        event WindowPositionChangedEventHandler PositionChanged;
 
         /// <summary>
         /// The state of the window has changed.
@@ -83,12 +83,20 @@ namespace WinMan
         /// The client rectangle of the window, relative to the workarea.
         /// Returns Rectangle.Empty once the window is dead (IsAlive=false).
         /// </summary>
-        Rectangle Location { get; }
+        Rectangle Position { get; }
         /// <summary>
         /// The current state of the window.
         /// Returns WindowState.Minimized once the window is dead (IsAlive=false).
         /// </summary>
         WindowState State { get; }
+        /// <summary>
+        /// The minimum allowed size for this window.
+        /// </summary>
+        Point MinSize { get; }
+        /// <summary>
+        /// The maxmimum allowed size for this window.
+        /// </summary>
+        Point MaxSize { get; }
         /// <summary>
         /// True if the window is resizable.
         /// Returns false once the window is dead (IsAlive=false).
@@ -109,6 +117,10 @@ namespace WinMan
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
         bool CanMaximize { get; }
+        /// <summary>
+        /// Whether a live thumbnail of this window can be created.
+        /// </summary>
+        bool CanCreateLiveThumbnail { get; }
         /// <summary>
         /// True if the window is always drawn above other non-topmost windows.
         /// Returns false once the window is dead (IsAlive=false).
@@ -138,7 +150,7 @@ namespace WinMan
         /// Changes the location of the window.
         /// </summary>
         /// <param name="newLocation"></param>
-        void SetLocation(Rectangle newLocation);
+        void SetPosition(Rectangle newLocation);
         /// <summary>
         /// Changes the state of the window.
         /// </summary>
