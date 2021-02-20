@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace WinMan
 {
@@ -46,7 +47,12 @@ namespace WinMan
         /// <summary>
         /// The window became the foreground window.
         /// </summary>
-        event WindowUpdatedEventHandler Activated;
+        event WindowUpdatedEventHandler GotFocus;
+
+        /// <summary>
+        /// The window lost focus.
+        /// </summary>
+        event WindowUpdatedEventHandler LostFocus;
 
         /// <summary>
         /// The window was added to the workspace.
@@ -130,7 +136,7 @@ namespace WinMan
         /// Is this the foreground window.
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
-        bool HasFocus { get; }
+        bool IsFocused { get; }
         /// <summary>
         /// Is the window instance alive.
         /// </summary>
@@ -140,6 +146,11 @@ namespace WinMan
         /// Returns IntPtr.Zero once the window is dead (IsAlive=false).
         /// </summary>
         IntPtr Handle { get; }
+
+        /// <summary>
+        /// Returns the process the window belongs to.
+        /// </summary>
+        Process Process { get; }
 
         /// <summary>
         /// Sends a close event to the window.

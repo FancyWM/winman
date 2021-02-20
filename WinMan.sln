@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.UI", "WinMan.UI\WinM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.Layouts.Test", "WinMan.UI.Test\WinMan.Layouts.Test.csproj", "{9732D169-8FB3-4F28-8410-6B67A103421B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.TaskView", "WinMan.TaskView\WinMan.TaskView.csproj", "{A8855F62-3F3E-4769-BD5F-28BF91C5BF3B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{9732D169-8FB3-4F28-8410-6B67A103421B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9732D169-8FB3-4F28-8410-6B67A103421B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9732D169-8FB3-4F28-8410-6B67A103421B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8855F62-3F3E-4769-BD5F-28BF91C5BF3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8855F62-3F3E-4769-BD5F-28BF91C5BF3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8855F62-3F3E-4769-BD5F-28BF91C5BF3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8855F62-3F3E-4769-BD5F-28BF91C5BF3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
