@@ -1,9 +1,10 @@
 # WinMan
-This repository contains several things:
 
+<img src="https://raw.githubusercontent.com/veselink1/winman/master/Resources/Icon.png" alt="WinMan.UI Logo" style="max-width: 256px;" height="auto">
 
 <img src="https://raw.githubusercontent.com/veselink1/winman/master/Screenshots/demo.gif" alt="WinMan.UI Demo" style="max-width: 100%;" height="auto">
 
+This repository contains several things:
 
 - WinMan - a WIP window management library for .NET with the following features
     * Platform-agnostic design
