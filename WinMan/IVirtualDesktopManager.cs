@@ -8,8 +8,8 @@ namespace WinMan
 
         bool CanManageVirtualDesktops { get; }
 
-        event VirtualDesktopChangedEventHandler DesktopAdded;
-        event VirtualDesktopChangedEventHandler DesktopRemoved;
+        event VirtualDesktopAddedEventHandler DesktopAdded;
+        event VirtualDesktopRemovedEventHandler DesktopRemoved;
         event VirtualDesktopChangedEventHandler CurrentDesktopChanged;
 
         IReadOnlyList<IVirtualDesktop> Desktops { get; }

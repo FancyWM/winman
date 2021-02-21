@@ -2,6 +2,8 @@
 {
     public interface IVirtualDesktop
     {
+        event VirtualDesktopRemovedEventHandler Removed;
+
         IWorkspace Workspace { get; }
 
         bool IsCurrent { get; }
@@ -19,7 +21,5 @@
         void SetName(string newName);
 
         void Remove();
-
-        event VirtualDesktopChangedEventHandler Removed;
     }
 }

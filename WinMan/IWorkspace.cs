@@ -3,7 +3,11 @@ using System.Collections.Generic;
 
 namespace WinMan
 {
-    public delegate void VirtualDesktopChangedEventHandler(IVirtualDesktop oldVirtualDesktop);
+    public delegate void VirtualDesktopAddedEventHandler(IVirtualDesktop virtualDesktop);
+
+    public delegate void VirtualDesktopRemovedEventHandler(IVirtualDesktop virtualDesktop);
+
+    public delegate void VirtualDesktopChangedEventHandler(IVirtualDesktop virtualDesktop, IVirtualDesktop oldVirtualDesktop);
 
     public delegate void WindowPresenceChangedEventHandler(IWindow sender);
 
