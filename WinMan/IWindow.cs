@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Runtime.InteropServices;
+using System.Runtime.Serialization;
 
 namespace WinMan
 {
@@ -80,29 +82,44 @@ namespace WinMan
         /// The IWorkspace which returned this IWindow instance.
         /// </summary>
         IWorkspace Workspace { get; }
+
         /// <summary>
         /// The title of the window.
         /// Returns string.Empty once the window is dead (IsAlive=false).
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         string Title { get; }
         /// <summary>
         /// The client rectangle of the window, relative to the workarea.
         /// Returns Rectangle.Empty once the window is dead (IsAlive=false).
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         Rectangle Position { get; }
         /// <summary>
         /// The current state of the window.
         /// Returns WindowState.Minimized once the window is dead (IsAlive=false).
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        /// <exception cref="InvalidOperationException">If the window cannot be changed to that state due to other reasons.</exception>
         WindowState State { get; }
         /// <summary>
         /// The minimum allowed size for this window.
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         Point MinSize { get; }
         /// <summary>
         /// The maxmimum allowed size for this window.
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         Point MaxSize { get; }
+
+        Rectangle FrameMargins { get; }
+
         /// <summary>
         /// True if the window is resizable.
         /// Returns false once the window is dead (IsAlive=false).
@@ -124,6 +141,10 @@ namespace WinMan
         /// </summary>
         bool CanMaximize { get; }
         /// <summary>
+        /// True if the window can be closed by the current process.
+        /// </summary>
+        bool CanClose { get; }
+        /// <summary>
         /// Whether a live thumbnail of this window can be created.
         /// </summary>
         bool CanCreateLiveThumbnail { get; }
@@ -131,11 +152,15 @@ namespace WinMan
         /// True if the window is always drawn above other non-topmost windows.
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         bool IsTopmost { get; }
         /// <summary>
         /// Is this the foreground window.
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         bool IsFocused { get; }
         /// <summary>
         /// Is the window instance alive.
@@ -150,32 +175,74 @@ namespace WinMan
         /// <summary>
         /// Returns the process the window belongs to.
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         Process Process { get; }
+
+        /// <summary>
+        /// Gets the previous window in the workspace. The previous window is the window above this one.
+        /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        IWindow PreviousWindow { get; }
+
+        /// <summary>
+        /// Gets the next window in the workspace. The previous window is the window below this one.
+        /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        IWindow NextWindow { get; }
 
         /// <summary>
         /// Sends a close event to the window.
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         void Close();
-        
+
         /// <summary>
         /// Changes the location of the window.
         /// </summary>
         /// <param name="newLocation"></param>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         void SetPosition(Rectangle newLocation);
         /// <summary>
         /// Changes the state of the window.
         /// </summary>
         /// <param name="state"></param>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         void SetState(WindowState state);
         /// <summary>
         /// Changes the topmost property of the window.
         /// </summary>
         /// <param name="topmost"></param>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         void SetTopmost(bool topmost);
+
+        /// <summary>
+        /// Moves the current window to be positioned after the given one in the z-order.
+        /// </summary>
+        /// <param name="other"></param>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        void InsertAfter(IWindow other);
+
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        void SendToBack();
+
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
+        void BringToFront();
 
         /// <summary>
         /// Activates the window.
         /// </summary>
+        /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="ExternalException"></exception>
         void RequestFocus();
     }
 }

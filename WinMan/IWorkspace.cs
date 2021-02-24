@@ -22,11 +22,11 @@ namespace WinMan
         event WindowPresenceChangedEventHandler WindowRemoved;
         event UnhandledExceptionEventHandler UnhandledException;
 
-        Rectangle WorkArea { get; }
-
         Point CursorLocation { get; }
 
         IWindow FocusedWindow { get; }
+
+        IDisplayManager DisplayManager { get; }
 
         IVirtualDesktopManager VirtualDesktopManager { get; }
 
@@ -38,7 +38,7 @@ namespace WinMan
 
         IReadOnlyList<IWindow> GetSnapshot();
 
-        IEnumerable<IWindow> OrderByZOrder(IReadOnlyList<IWindow> windows);
+        IComparer<IWindow> CreateSnapshotZOrderComparer();
 
         /// <param name="destWindow"></param>
         /// <param name="srcWindow"></param>

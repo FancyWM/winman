@@ -18,6 +18,7 @@ namespace WinMan
         public Point TopRight => new Point(Right, Top);
         public Point BottomLeft => new Point(Left, Bottom);
         public Point Size => new Point(Width, Height);
+        public Point Center => new Point((Left + Right) / 2, (Top + Bottom) / 2);
 
         public static Rectangle OffsetAndSize(int left, int top, int width, int height)
         {
@@ -38,6 +39,11 @@ namespace WinMan
                 && pt.X <= Right
                 && Top <= pt.Y
                 && pt.Y <= Bottom;
+        }
+
+        public bool Contains(Rectangle rect)
+        {
+            return Contains(rect.TopLeft) && Contains(rect.BottomRight);
         }
 
         public bool Equals(Rectangle other)
@@ -75,6 +81,11 @@ namespace WinMan
         public override string ToString()
         {
             return $"(L={Left}, T={Top}, R={Right}, B={Bottom}, W={Width}, H={Height})";
+        }
+
+        public bool Contains(object center)
+        {
+            throw new NotImplementedException();
         }
     }
 }
