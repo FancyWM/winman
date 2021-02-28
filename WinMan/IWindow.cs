@@ -131,6 +131,10 @@ namespace WinMan
         /// </summary>
         bool CanMove { get; }
         /// <summary>
+        /// True if the window can be reordered in the visual hierarchy.
+        /// </summary>
+        bool CanReorder { get; }
+        /// <summary>
         /// True if the window supports minimization.
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
