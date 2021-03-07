@@ -1,6 +1,6 @@
-# WinMan
+# WinMan <img src="https://raw.githubusercontent.com/veselink1/winman/master/Resources/Icon.png" alt="WinMan.UI Logo" width="96">
 
-<img src="https://raw.githubusercontent.com/veselink1/winman/master/Resources/Icon.png" alt="WinMan.UI Logo" style="max-width: 256px;" height="auto">
+
 
 <img src="https://raw.githubusercontent.com/veselink1/winman/master/Screenshots/demo.gif" alt="WinMan.UI Demo" style="max-width: 100%;" height="auto">
 
