@@ -110,13 +110,13 @@ namespace WinMan
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        Point MinSize { get; }
+        Point? MinSize { get; }
         /// <summary>
         /// The maxmimum allowed size for this window.
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        Point MaxSize { get; }
+        Point? MaxSize { get; }
 
         Rectangle FrameMargins { get; }
 
