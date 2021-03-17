@@ -17,17 +17,17 @@ namespace WinMan
         }
     }
 
-    public class InvalidMonitorReferenceException : InvalidReferenceException
+    public class InvalidDisplayReferenceException : InvalidReferenceException
     {
         public IntPtr Handle { get; }
 
-        public InvalidMonitorReferenceException(IntPtr handle)
+        public InvalidDisplayReferenceException(IntPtr handle)
             : base($"The monitor previously identified by the handle 0x{handle.ToString("X8")} has been destroyed.")
         {
             Handle = handle;
         }
 
-        public InvalidMonitorReferenceException(IntPtr handle, Exception innerException)
+        public InvalidDisplayReferenceException(IntPtr handle, Exception innerException)
             : base($"The monitor previously identified by the handle 0x{handle.ToString("X8")} has been destroyed.", innerException)
         {
             Handle = handle;

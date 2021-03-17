@@ -45,5 +45,7 @@ namespace WinMan
         /// <returns></returns>
         /// <exception cref="NotSupportedException"></exception>
         ILiveThumbnail CreateLiveThumbnail(IWindow destWindow, IWindow srcWindow);
+
+        void RefreshConfiguration();
     }
 }
