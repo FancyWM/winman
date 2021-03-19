@@ -1,17 +1,14 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WinMan
 {
-    public delegate void DisplayChangedHandler(IDisplay display);
-    public delegate void VirtualDisplayBoundsChangedHandler(Rectangle oldBounds);
-    public delegate void PrimaryDisplayChangedHandler(IDisplay oldDisplay);
-
     public interface IDisplayManager
     {
-        event DisplayChangedHandler Added;
-        event DisplayChangedHandler Removed;
-        event VirtualDisplayBoundsChangedHandler VirtualDisplayBoundsChanged;
-        event PrimaryDisplayChangedHandler PrimaryDisplayChanged;
+        event EventHandler<DisplayChangedEventArgs> Added;
+        event EventHandler<DisplayChangedEventArgs> Removed;
+        event EventHandler<DisplayRectangleChangedEventArgs> VirtualDisplayBoundsChanged;
+        event EventHandler<PrimaryDisplayChangedEventArgs> PrimaryDisplayChanged;
 
         IWorkspace Workspace { get; }
 

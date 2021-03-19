@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
-using System.Runtime.Serialization;
 
 namespace WinMan
 {
@@ -23,58 +22,58 @@ namespace WinMan
         /// Event emitted when the window location starts changing as a result of 
         /// user interaction (resize or move).
         /// </summary>
-        event WindowPositionChangedEventHandler PositionChangeStart;
+        event EventHandler<WindowPositionChangedEventArgs> PositionChangeStart;
 
         /// <summary>
         /// Event emitted when the user interaction driving the resize or move of 
         /// the window ends.
         /// </summary>
-        event WindowPositionChangedEventHandler PositionChangeEnd;
+        event EventHandler<WindowPositionChangedEventArgs> PositionChangeEnd;
         
         /// <summary>
         /// The location of the window has changed. This might be due to a user interaction
         /// or through some form of scripted behaviour. 
         /// </summary>
-        event WindowPositionChangedEventHandler PositionChanged;
+        event EventHandler<WindowPositionChangedEventArgs> PositionChanged;
 
         /// <summary>
         /// The state of the window has changed.
         /// </summary>
-        event WindowStateChangedEventHandler StateChanged;
+        event EventHandler<WindowStateChangedEventArgs> StateChanged;
 
         /// <summary>
         /// The IsTopmost property of the window has changed.
         /// </summary>
-        event WindowUpdatedEventHandler TopmostChanged;
+        event EventHandler<WindowTopmostChangedEventArgs> TopmostChanged;
 
         /// <summary>
         /// The window became the foreground window.
         /// </summary>
-        event WindowUpdatedEventHandler GotFocus;
+        event EventHandler<WindowFocusChangedEventArgs> GotFocus;
 
         /// <summary>
         /// The window lost focus.
         /// </summary>
-        event WindowUpdatedEventHandler LostFocus;
+        event EventHandler<WindowFocusChangedEventArgs> LostFocus;
 
         /// <summary>
         /// The window was added to the workspace.
         /// </summary>
-        event WindowUpdatedEventHandler Added;
+        event EventHandler<WindowChangedEventArgs> Added;
 
         /// <summary>
         /// The window was removed from the workspace.
         /// IsAlive is likely to be false.
         /// </summary>
-        event WindowUpdatedEventHandler Removed;
+        event EventHandler<WindowChangedEventArgs> Removed;
 
         /// <summary>
         /// The window instance was destroyed.
         /// IsAlive will be false.
         /// </summary>
-        event WindowUpdatedEventHandler Destroyed;
+        event EventHandler<WindowChangedEventArgs> Destroyed;
 
-        event WindowTitleChangedEventHandler TitleChanged;
+        event EventHandler<WindowTitleChangedEventArgs> TitleChanged;
 
         /// <summary>
         /// The internal synchronisation object.

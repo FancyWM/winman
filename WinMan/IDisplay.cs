@@ -1,18 +1,16 @@
-﻿namespace WinMan
-{
-    public delegate void DisplayWorkAreaChangedHandler(IDisplay display, Rectangle oldWorkArea);
-    public delegate void DisplayBoundsChangedHandler(IDisplay display, Rectangle oldBounds);
-    public delegate void DisplayScalingChangedHandler(IDisplay display, double oldScaling);
+﻿using System;
 
+namespace WinMan
+{
     public interface IDisplay
     {
-        event DisplayChangedHandler Removed;
+        event EventHandler<DisplayChangedEventArgs> Removed;
 
-        event DisplayWorkAreaChangedHandler WorkAreaChanged;
+        event EventHandler<DisplayRectangleChangedEventArgs> WorkAreaChanged;
 
-        event DisplayBoundsChangedHandler BoundsChanged;
+        event EventHandler<DisplayRectangleChangedEventArgs> BoundsChanged;
 
-        event DisplayScalingChangedHandler ScalingChanged;
+        event EventHandler<DisplayScalingChangedEventArgs> ScalingChanged;
 
         Rectangle WorkArea { get; }
 

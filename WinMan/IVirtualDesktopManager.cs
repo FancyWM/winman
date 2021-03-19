@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace WinMan
 {
@@ -8,9 +9,9 @@ namespace WinMan
 
         bool CanManageVirtualDesktops { get; }
 
-        event VirtualDesktopAddedEventHandler DesktopAdded;
-        event VirtualDesktopRemovedEventHandler DesktopRemoved;
-        event VirtualDesktopChangedEventHandler CurrentDesktopChanged;
+        event EventHandler<DesktopChangedEventArgs> DesktopAdded;
+        event EventHandler<DesktopChangedEventArgs> DesktopRemoved;
+        event EventHandler<CurrentDesktopChangedEventArgs> CurrentDesktopChanged;
 
         IReadOnlyList<IVirtualDesktop> Desktops { get; }
 

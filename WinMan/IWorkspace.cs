@@ -3,23 +3,11 @@ using System.Collections.Generic;
 
 namespace WinMan
 {
-    public delegate void VirtualDesktopAddedEventHandler(IVirtualDesktop virtualDesktop);
-
-    public delegate void VirtualDesktopRemovedEventHandler(IVirtualDesktop virtualDesktop);
-
-    public delegate void VirtualDesktopChangedEventHandler(IVirtualDesktop virtualDesktop, IVirtualDesktop oldVirtualDesktop);
-
-    public delegate void WindowPresenceChangedEventHandler(IWindow sender);
-
-    public delegate void ActiveChangedEventHandler(IWindow oldActiveWindow);
-
-    public delegate void UnhandledExceptionEventHandler(Exception exception);
-
     public interface IWorkspace : IDisposable
     {
-        event WindowPresenceChangedEventHandler WindowManaging;
-        event WindowPresenceChangedEventHandler WindowAdded;
-        event WindowPresenceChangedEventHandler WindowRemoved;
+        event EventHandler<WindowChangedEventArgs> WindowManaging;
+        event EventHandler<WindowChangedEventArgs> WindowAdded;
+        event EventHandler<WindowChangedEventArgs> WindowRemoved;
         event UnhandledExceptionEventHandler UnhandledException;
 
         Point CursorLocation { get; }

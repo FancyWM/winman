@@ -1,8 +1,10 @@
-﻿namespace WinMan
+﻿using System;
+
+namespace WinMan
 {
     public interface IVirtualDesktop
     {
-        event VirtualDesktopRemovedEventHandler Removed;
+        event EventHandler<DesktopChangedEventArgs> Removed;
 
         IWorkspace Workspace { get; }
 
