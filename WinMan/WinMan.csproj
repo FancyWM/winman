@@ -62,7 +62,6 @@
     <Compile Include="Exceptions.cs" />
     <Compile Include="IDisplay.cs" />
     <Compile Include="IDisplayManager.cs" />
-    <Compile Include="ILiveThumbnail.cs" />
     <Compile Include="Implementation\DummyVirtualDesktop.cs" />
     <Compile Include="Implementation\DummyVirtualDesktopManager.cs" />
     <Compile Include="Implementation\Win32\ExceptionExtensions.cs" />
@@ -72,7 +71,6 @@
     <Compile Include="Implementation\Win32\VirtualDesktop.cs" />
     <Compile Include="Implementation\Win32\Win32Display.cs" />
     <Compile Include="Implementation\Win32\Win32DisplayManager.cs" />
-    <Compile Include="Implementation\Win32\Win32LiveThumbnail.cs" />
     <Compile Include="Implementation\Win32\Win32VirtualDesktop.cs" />
     <Compile Include="Implementation\Win32\Win32VirtualDesktopManager.cs" />
     <Compile Include="Implementation\Win32\Win32Window.cs" />
