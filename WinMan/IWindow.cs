@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 
 namespace WinMan
 {
-    public enum WindowState
+    public enum WindowState : int
     {
         Minimized,
         Restored,
@@ -15,6 +15,7 @@ namespace WinMan
     public delegate void WindowUpdatedEventHandler(IWindow sender);
     public delegate void WindowPositionChangedEventHandler(IWindow sender, Rectangle prevPosition);
     public delegate void WindowStateChangedEventHandler(IWindow sender, WindowState prevState);
+    public delegate void WindowTitleChangedEventHandler(IWindow sender, string prevTitle);
 
     public interface IWindow : IEquatable<IWindow>
     {
@@ -72,6 +73,8 @@ namespace WinMan
         /// IsAlive will be false.
         /// </summary>
         event WindowUpdatedEventHandler Destroyed;
+
+        event WindowTitleChangedEventHandler TitleChanged;
 
         /// <summary>
         /// The internal synchronisation object.
