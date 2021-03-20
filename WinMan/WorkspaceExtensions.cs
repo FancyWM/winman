@@ -6,6 +6,9 @@ namespace WinMan
 {
     public static class WorkspaceExtensions
     {
+        /// <summary>
+        /// Returns a snapshot of the windows on the current desktop.
+        /// </summary>
         public static IReadOnlyList<IWindow> GetCurrentDesktopSnapshot(this IWorkspace workspace)
         {
             return workspace.GetSnapshot()

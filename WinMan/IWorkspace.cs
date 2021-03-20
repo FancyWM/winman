@@ -5,9 +5,22 @@ namespace WinMan
 {
     public interface IWorkspace : IDisposable
     {
+        /// <summary>
+        /// The window was initially present when <see cref="Open"/> was first called.
+        /// </summary>
         event EventHandler<WindowChangedEventArgs> WindowManaging;
+        /// <summary>
+        /// The window was just added to the workspace.
+        /// </summary>
         event EventHandler<WindowChangedEventArgs> WindowAdded;
+        /// <summary>
+        /// The window was just removed to the workspace.
+        /// </summary>
         event EventHandler<WindowChangedEventArgs> WindowRemoved;
+        /// <summary>
+        /// An exception raised during event handling or in the OS-specific workspace implementation was 
+        /// thrown and uncaught.
+        /// </summary>
         event UnhandledExceptionEventHandler UnhandledException;
 
         /// <summary>
@@ -36,12 +49,10 @@ namespace WinMan
         IVirtualDesktopManager VirtualDesktopManager { get; }
 
         /// <summary>
-        /// Some workspace changes might require dirty checking to implement. 
-        /// Use this to change the watch interval to a lower value for when a more
-        /// real-time observation is necessary. The higher this value is, the less
-        /// system resources will be used.
+        /// Some workspace implementations might require dirty checking to detect changes. 
+        /// The higher this value is, the less system resources will be used.
         /// 
-        /// Alternatively, you may also call <see cref="RefreshConfiguration"/>, to manually do the same.
+        /// Alternatively, you may also call <see cref="RefreshConfiguration"/>, to run a change-detection cycle manually.
         /// </summary>
         TimeSpan WatchInterval { get; set; }
 
@@ -53,13 +64,15 @@ namespace WinMan
         void Open();
 
         /// <summary>
-        /// Finds a top-level visible window by its native window handle.
+        /// Finds a window by its native window handle.
         /// </summary>
         IWindow FindWindow(IntPtr windowHandle);
 
         /// <summary>
         /// Creates an <see cref="IWindow"/> instance for the corresponding handle.
         /// This instance may not compare equal to other <see cref="IWindow"/> references to the same OS window.
+        /// Use this only for throaway instances where you need to read a certain property of the window.
+        /// Events will not be raised on this instance, as it is not tied to the workspace backend.
         /// </summary>
         IWindow UnsafeCreateFromHandle(IntPtr windowHandle);
 
@@ -74,7 +87,7 @@ namespace WinMan
         IComparer<IWindow> CreateSnapshotZOrderComparer();
 
         /// <summary>
-        /// Manually instructs the underlying implementation to dirty-check the current workspace.
+        /// Manually instructs the underlying implementation to run an change-detection cycle on the workspace.
         /// </summary>
         void RefreshConfiguration();
     }

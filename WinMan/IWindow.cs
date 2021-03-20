@@ -4,22 +4,40 @@ using System.Runtime.InteropServices;
 
 namespace WinMan
 {
+    /// <summary>
+    /// Represents the possible states of a window.
+    /// </summary>
     public enum WindowState : int
     {
+        /// <summary>
+        /// The window is minimized or otherwise hidden.
+        /// </summary>
         Minimized,
+        /// <summary>
+        /// The window is restored and visible, but might be covered by other windows.
+        /// </summary>
         Restored,
+        /// <summary>
+        /// The window is maximized or covers the full display area.
+        /// </summary>
         Maximized,
     }
 
-    public delegate void WindowUpdatedEventHandler(IWindow sender);
-    public delegate void WindowPositionChangedEventHandler(IWindow sender, Rectangle prevPosition);
-    public delegate void WindowStateChangedEventHandler(IWindow sender, WindowState prevState);
-    public delegate void WindowTitleChangedEventHandler(IWindow sender, string prevTitle);
-
+    /// <summary>
+    /// Used to interact with OS windows.
+    /// All values returned by properties of <see cref="IWindow"/>
+    /// represent real (unscaled by DPI settings) values.
+    /// 
+    /// All operations can throw <see cref="InvalidWindowReferenceException" /> at any time. 
+    /// Your code should be able to handle this gracefully.
+    /// 
+    /// All property reads return default but valid values once the window is dead and never
+    /// throw <see cref="InvalidWindowReferenceException"/>.
+    /// </summary>
     public interface IWindow : IEquatable<IWindow>
     {
         /// <summary>
-        /// Event emitted when the window location starts changing as a result of 
+        /// Event emitted when the window position starts changing as a result of 
         /// user interaction (resize or move).
         /// </summary>
         event EventHandler<WindowPositionChangedEventArgs> PositionChangeStart;
@@ -29,9 +47,9 @@ namespace WinMan
         /// the window ends.
         /// </summary>
         event EventHandler<WindowPositionChangedEventArgs> PositionChangeEnd;
-        
+
         /// <summary>
-        /// The location of the window has changed. This might be due to a user interaction
+        /// The position of the window has changed. This might be due to a user interaction
         /// or through some form of scripted behaviour. 
         /// </summary>
         event EventHandler<WindowPositionChangedEventArgs> PositionChanged;
@@ -73,6 +91,9 @@ namespace WinMan
         /// </summary>
         event EventHandler<WindowChangedEventArgs> Destroyed;
 
+        /// <summary>
+        /// The title of the window has changed.
+        /// </summary>
         event EventHandler<WindowTitleChangedEventArgs> TitleChanged;
 
         /// <summary>
@@ -89,34 +110,29 @@ namespace WinMan
         /// The title of the window.
         /// Returns string.Empty once the window is dead (IsAlive=false).
         /// </summary>
-        /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         string Title { get; }
         /// <summary>
         /// The client rectangle of the window, relative to the workarea.
         /// Returns Rectangle.Empty once the window is dead (IsAlive=false).
         /// </summary>
-        /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         Rectangle Position { get; }
         /// <summary>
         /// The current state of the window.
         /// Returns WindowState.Minimized once the window is dead (IsAlive=false).
         /// </summary>
-        /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         /// <exception cref="InvalidOperationException">If the window cannot be changed to that state due to other reasons.</exception>
         WindowState State { get; }
         /// <summary>
         /// The minimum allowed size for this window.
         /// </summary>
-        /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         Point? MinSize { get; }
         /// <summary>
         /// The maxmimum allowed size for this window.
         /// </summary>
-        /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         Point? MaxSize { get; }
 
@@ -151,10 +167,6 @@ namespace WinMan
         /// </summary>
         bool CanClose { get; }
         /// <summary>
-        /// Whether a live thumbnail of this window can be created.
-        /// </summary>
-        bool CanCreateLiveThumbnail { get; }
-        /// <summary>
         /// True if the window is always drawn above other non-topmost windows.
         /// Returns false once the window is dead (IsAlive=false).
         /// </summary>
@@ -183,21 +195,21 @@ namespace WinMan
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        Process Process { get; }
+        Process GetProcess();
 
         /// <summary>
         /// Gets the previous window in the workspace. The previous window is the window above this one.
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        IWindow PreviousWindow { get; }
+        IWindow GetPreviousWindow();
 
         /// <summary>
         /// Gets the next window in the workspace. The previous window is the window below this one.
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        IWindow NextWindow { get; }
+        IWindow GetNextWindow();
 
         /// <summary>
         /// Sends a close event to the window.
@@ -236,10 +248,16 @@ namespace WinMan
         /// <exception cref="ExternalException"></exception>
         void InsertAfter(IWindow other);
 
+        /// <summary>
+        /// Positions the window behind all other non-topmost windows.
+        /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         void SendToBack();
 
+        /// <summary>
+        /// Positions the window in front of all other non-topmost windows.
+        /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
         void BringToFront();
