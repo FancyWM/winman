@@ -10,22 +10,22 @@ namespace WinMan
         /// <summary>
         /// The display has been removed.
         /// </summary>
-        event EventHandler<DisplayChangedEventArgs> Removed;
+        event EventHandler<DisplayChangedEventArgs>? Removed;
 
         /// <summary>
         /// The work area has changed.
         /// </summary>
-        event EventHandler<DisplayRectangleChangedEventArgs> WorkAreaChanged;
+        event EventHandler<DisplayRectangleChangedEventArgs>? WorkAreaChanged;
 
         /// <summary>
         /// The bounds have changed.
         /// </summary>
-        event EventHandler<DisplayRectangleChangedEventArgs> BoundsChanged;
+        event EventHandler<DisplayRectangleChangedEventArgs>? BoundsChanged;
 
         /// <summary>
         /// The display scaling has changed.
         /// </summary>
-        event EventHandler<DisplayScalingChangedEventArgs> ScalingChanged;
+        event EventHandler<DisplayScalingChangedEventArgs>? ScalingChanged;
 
         IWorkspace Workspace { get; }
 

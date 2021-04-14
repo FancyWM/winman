@@ -40,61 +40,61 @@ namespace WinMan
         /// Event emitted when the window position starts changing as a result of 
         /// user interaction (resize or move).
         /// </summary>
-        event EventHandler<WindowPositionChangedEventArgs> PositionChangeStart;
+        event EventHandler<WindowPositionChangedEventArgs>? PositionChangeStart;
 
         /// <summary>
         /// Event emitted when the user interaction driving the resize or move of 
         /// the window ends.
         /// </summary>
-        event EventHandler<WindowPositionChangedEventArgs> PositionChangeEnd;
+        event EventHandler<WindowPositionChangedEventArgs>? PositionChangeEnd;
 
         /// <summary>
         /// The position of the window has changed. This might be due to a user interaction
         /// or through some form of scripted behaviour. 
         /// </summary>
-        event EventHandler<WindowPositionChangedEventArgs> PositionChanged;
+        event EventHandler<WindowPositionChangedEventArgs>? PositionChanged;
 
         /// <summary>
         /// The state of the window has changed.
         /// </summary>
-        event EventHandler<WindowStateChangedEventArgs> StateChanged;
+        event EventHandler<WindowStateChangedEventArgs>? StateChanged;
 
         /// <summary>
         /// The IsTopmost property of the window has changed.
         /// </summary>
-        event EventHandler<WindowTopmostChangedEventArgs> TopmostChanged;
+        event EventHandler<WindowTopmostChangedEventArgs>? TopmostChanged;
 
         /// <summary>
         /// The window became the foreground window.
         /// </summary>
-        event EventHandler<WindowFocusChangedEventArgs> GotFocus;
+        event EventHandler<WindowFocusChangedEventArgs>? GotFocus;
 
         /// <summary>
         /// The window lost focus.
         /// </summary>
-        event EventHandler<WindowFocusChangedEventArgs> LostFocus;
+        event EventHandler<WindowFocusChangedEventArgs>? LostFocus;
 
         /// <summary>
         /// The window was added to the workspace.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> Added;
+        event EventHandler<WindowChangedEventArgs>? Added;
 
         /// <summary>
         /// The window was removed from the workspace.
         /// IsAlive is likely to be false.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> Removed;
+        event EventHandler<WindowChangedEventArgs>? Removed;
 
         /// <summary>
         /// The window instance was destroyed.
         /// IsAlive will be false.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> Destroyed;
+        event EventHandler<WindowChangedEventArgs>? Destroyed;
 
         /// <summary>
         /// The title of the window has changed.
         /// </summary>
-        event EventHandler<WindowTitleChangedEventArgs> TitleChanged;
+        event EventHandler<WindowTitleChangedEventArgs>? TitleChanged;
 
         /// <summary>
         /// The internal synchronisation object.
@@ -202,14 +202,14 @@ namespace WinMan
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        IWindow GetPreviousWindow();
+        IWindow? GetPreviousWindow();
 
         /// <summary>
         /// Gets the next window in the workspace. The previous window is the window below this one.
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        IWindow GetNextWindow();
+        IWindow? GetNextWindow();
 
         /// <summary>
         /// Sends a close event to the window.

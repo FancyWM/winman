@@ -18,15 +18,15 @@ namespace WinMan
         /// <summary>
         /// Raised when a new desktop has been added to the workspace.
         /// </summary>
-        event EventHandler<DesktopChangedEventArgs> DesktopAdded;
+        event EventHandler<DesktopChangedEventArgs>? DesktopAdded;
         /// <summary>
         /// Raised when a desktop has been removed from the workspace.
         /// </summary>
-        event EventHandler<DesktopChangedEventArgs> DesktopRemoved;
+        event EventHandler<DesktopChangedEventArgs>? DesktopRemoved;
         /// <summary>
         /// Raised when the current desktop is changed.
         /// </summary>
-        event EventHandler<CurrentDesktopChangedEventArgs> CurrentDesktopChanged;
+        event EventHandler<CurrentDesktopChangedEventArgs>? CurrentDesktopChanged;
 
         /// <summary>
         /// Returns a snapshot of the current virtual desktops in the workspace.

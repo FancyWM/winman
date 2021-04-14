@@ -5,23 +5,25 @@ namespace WinMan
 {
     public interface IWorkspace : IDisposable
     {
+        event EventHandler<CursorLocationChangedEventArgs>? CursorLocationChanged;
+        event EventHandler<FocusedWindowChangedEventArgs>? FocusedWindowChanged;
         /// <summary>
         /// The window was initially present when <see cref="Open"/> was first called.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> WindowManaging;
+        event EventHandler<WindowChangedEventArgs>? WindowManaging;
         /// <summary>
         /// The window was just added to the workspace.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> WindowAdded;
+        event EventHandler<WindowChangedEventArgs>? WindowAdded;
         /// <summary>
         /// The window was just removed to the workspace.
         /// </summary>
-        event EventHandler<WindowChangedEventArgs> WindowRemoved;
+        event EventHandler<WindowChangedEventArgs>? WindowRemoved;
         /// <summary>
         /// An exception raised during event handling or in the OS-specific workspace implementation was 
         /// thrown and uncaught.
         /// </summary>
-        event UnhandledExceptionEventHandler UnhandledException;
+        event UnhandledExceptionEventHandler? UnhandledException;
 
         /// <summary>
         /// Has <see cref="Open"/> been called.
@@ -36,7 +38,7 @@ namespace WinMan
         /// <summary>
         /// A reference to the currently focused window or null, if no top-level visible window is focused.
         /// </summary>
-        IWindow FocusedWindow { get; }
+        IWindow? FocusedWindow { get; }
 
         /// <summary>
         /// The <see cref="IDisplayManager"/> instance.
@@ -66,7 +68,7 @@ namespace WinMan
         /// <summary>
         /// Finds a window by its native window handle.
         /// </summary>
-        IWindow FindWindow(IntPtr windowHandle);
+        IWindow? FindWindow(IntPtr windowHandle);
 
         /// <summary>
         /// Creates an <see cref="IWindow"/> instance for the corresponding handle.

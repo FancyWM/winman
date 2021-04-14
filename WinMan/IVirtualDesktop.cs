@@ -10,7 +10,7 @@ namespace WinMan
         /// <summary>
         /// Raised once the desktops has been removed from the workspace.
         /// </summary>
-        event EventHandler<DesktopChangedEventArgs> Removed;
+        event EventHandler<DesktopChangedEventArgs>? Removed;
 
         IWorkspace Workspace { get; }
 

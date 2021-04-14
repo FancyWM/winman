@@ -82,10 +82,5 @@ namespace WinMan
         {
             return $"(L={Left}, T={Top}, R={Right}, B={Bottom}, W={Width}, H={Height})";
         }
-
-        public bool Contains(object center)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

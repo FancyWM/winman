@@ -11,19 +11,19 @@ namespace WinMan
         /// <summary>
         /// A new display had been added.
         /// </summary>
-        event EventHandler<DisplayChangedEventArgs> Added;
+        event EventHandler<DisplayChangedEventArgs>? Added;
         /// <summary>
         /// A display has been removed.
         /// </summary>
-        event EventHandler<DisplayChangedEventArgs> Removed;
+        event EventHandler<DisplayChangedEventArgs>? Removed;
         /// <summary>
         /// The bounds of the virtual display have changed.
         /// </summary>
-        event EventHandler<DisplayRectangleChangedEventArgs> VirtualDisplayBoundsChanged;
+        event EventHandler<DisplayRectangleChangedEventArgs>? VirtualDisplayBoundsChanged;
         /// <summary>
         /// The primary display has been changed.
         /// </summary>
-        event EventHandler<PrimaryDisplayChangedEventArgs> PrimaryDisplayChanged;
+        event EventHandler<PrimaryDisplayChangedEventArgs>? PrimaryDisplayChanged;
 
         IWorkspace Workspace { get; }
 

@@ -1,8 +1,71 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 
 namespace WinMan
 {
+    public interface IPropertyChangedEventArgs
+    {
+        string PropertyName { get; }
+        PropertyInfo PropertyInfo { get; }
+        object? Source { get; }
+        object? NewValue { get; }
+        object? OldValue { get; }
+    }
+
+    public abstract class PropertyChangedEventArgsBase<TSource, TValue> : EventArgs, IPropertyChangedEventArgs
+    {
+        public abstract PropertyInfo PropertyInfo { get; }
+        public abstract string PropertyName { get; }
+        public TSource Source { get; }
+        protected TValue NewValue { get; }
+        protected TValue OldValue { get; }
+
+        object? IPropertyChangedEventArgs.Source => Source!;
+
+        object? IPropertyChangedEventArgs.NewValue => NewValue!;
+
+        object? IPropertyChangedEventArgs.OldValue => OldValue!;
+
+        protected PropertyChangedEventArgsBase(TSource source, TValue newValue, TValue oldValue)
+        {
+            Source = source;
+            NewValue = newValue;
+            OldValue = oldValue;
+        }
+    }
+
+    public class CursorLocationChangedEventArgs : PropertyChangedEventArgsBase<IWorkspace, Point>
+    {
+        public override PropertyInfo PropertyInfo => Source.GetType().GetProperty(nameof(IWorkspace.CursorLocation));
+
+        public override string PropertyName => nameof(IWorkspace.CursorLocation);
+
+        public Point NewLocation => NewValue;
+
+        public Point OldLocation => OldValue;
+
+        public CursorLocationChangedEventArgs(IWorkspace source, Point newValue, Point oldValue) 
+            : base(source, newValue, oldValue)
+        {
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is CursorLocationChangedEventArgs args &&
+                   EqualityComparer<IWorkspace>.Default.Equals(Source, args.Source) &&
+                   NewValue.Equals(args.NewValue) &&
+                   OldValue.Equals(args.OldValue) &&
+                   EqualityComparer<PropertyInfo>.Default.Equals(PropertyInfo, args.PropertyInfo) &&
+                   PropertyName == args.PropertyName;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Source, NewValue, OldValue, PropertyInfo, PropertyName);
+        }
+    }
+
     public class WindowChangedEventArgs : EventArgs
     {
         public IWindow Source { get; }
@@ -21,6 +84,30 @@ namespace WinMan
         public override int GetHashCode()
         {
             return 924162744 + EqualityComparer<IWindow>.Default.GetHashCode(Source);
+        }
+    }
+
+    public class FocusedWindowChangedEventArgs : EventArgs
+    {
+        public IWindow? NewFocusedWindow { get; }
+        public IWindow? OldFocusedWindow { get; }
+
+        public FocusedWindowChangedEventArgs(IWindow? newFocusedWindow, IWindow? oldFocusedWindow)
+        {
+            NewFocusedWindow = newFocusedWindow;
+            OldFocusedWindow = oldFocusedWindow;
+        }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is FocusedWindowChangedEventArgs args &&
+                   EqualityComparer<IWindow?>.Default.Equals(NewFocusedWindow, args.NewFocusedWindow) &&
+                   EqualityComparer<IWindow?>.Default.Equals(OldFocusedWindow, args.OldFocusedWindow);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(NewFocusedWindow, OldFocusedWindow);
         }
     }
 
@@ -196,9 +283,9 @@ namespace WinMan
     {
         public IVirtualDesktop NewDesktop => Source;
 
-        public IVirtualDesktop OldDesktop { get; }
+        public IVirtualDesktop? OldDesktop { get; }
 
-        public CurrentDesktopChangedEventArgs(IVirtualDesktop newDesktop, IVirtualDesktop oldDesktop) : base(newDesktop)
+        public CurrentDesktopChangedEventArgs(IVirtualDesktop newDesktop, IVirtualDesktop? oldDesktop) : base(newDesktop)
         {
             OldDesktop = oldDesktop;
         }
@@ -208,7 +295,7 @@ namespace WinMan
             return obj is CurrentDesktopChangedEventArgs args &&
                    EqualityComparer<IVirtualDesktop>.Default.Equals(Source, args.Source) &&
                    EqualityComparer<IVirtualDesktop>.Default.Equals(NewDesktop, args.NewDesktop) &&
-                   EqualityComparer<IVirtualDesktop>.Default.Equals(OldDesktop, args.OldDesktop);
+                   EqualityComparer<IVirtualDesktop?>.Default.Equals(OldDesktop, args.OldDesktop);
         }
 
         public override int GetHashCode()
@@ -216,7 +303,7 @@ namespace WinMan
             int hashCode = 1187749605;
             hashCode = hashCode * -1521134295 + EqualityComparer<IVirtualDesktop>.Default.GetHashCode(Source);
             hashCode = hashCode * -1521134295 + EqualityComparer<IVirtualDesktop>.Default.GetHashCode(NewDesktop);
-            hashCode = hashCode * -1521134295 + EqualityComparer<IVirtualDesktop>.Default.GetHashCode(OldDesktop);
+            hashCode = hashCode * -1521134295 + EqualityComparer<IVirtualDesktop?>.Default.GetHashCode(OldDesktop);
             return hashCode;
         }
     }
