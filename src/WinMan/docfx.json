@@ -1,0 +1,33 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [ "**/*.csproj" ],
+          "exclude": [ "**/bin/**", "**/obj/**" ],
+          "src": "."
+        }
+      ],
+      "dest": "../../obj/docfx"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [ "**/*.yml" ],
+        "src": "../../obj/docfx"
+      }
+    ],
+    "externalReference": [
+    ],
+    "globalMetadata": {
+      "_appTitle": "WinMan Docs",
+      "_gitContribute": {
+        "repo": "https://github.com/veselink1/winman",
+        "branch": "master"
+      }
+    },
+    "dest": "../../Documentation/_site",
+    "template": "default"
+  }
+}
