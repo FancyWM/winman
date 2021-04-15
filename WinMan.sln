@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinMan", "WinMan\WinMan.csproj", "{6E3DAF0E-3D3D-4230-89E8-0BC8F916E8E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WinMan", "src\WinMan\WinMan.csproj", "{6E3DAF0E-3D3D-4230-89E8-0BC8F916E8E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
