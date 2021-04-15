@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.CurrentDesktopChangedEventArgs.html",
-          "hash": "3NLtNfEnPVX0ckzKbu/vTLJox958bHRFXcNlTkGxgIQ="
+          "hash": "luJl0thnCnQ394ZcSsXIzUlle/nz4GndPGGmINfQzZ4="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.CursorLocationChangedEventArgs.html",
-          "hash": "uOmCXX2RyGZan/iOFmIm+ShaDoGyV0ndptFmIyDDHCA="
+          "hash": "xkKfsxYNbWVh1nQ0HcxKjAONA4xza8d81XhMxDb/MxA="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.DesktopChangedEventArgs.html",
-          "hash": "QYI85Ux89Y6uFru1zp/rJvbYLXbcVHPLL3Bu1Uln/H4="
+          "hash": "bepIRvZjsgKJE+NYd4enacIBtzYtgerIi6rjBHkWojE="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.DisplayChangedEventArgs.html",
-          "hash": "BhnguWtDQ1TrM4QSxVKjWP6fNGJ8v1NnwGJ+aFmBbUw="
+          "hash": "iGbdZW2XOdo34gvkKlttERTfSRsyBxWfeKICYv8JP+U="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.DisplayRectangleChangedEventArgs.html",
-          "hash": "Ic/wnAhODC8TVeUNy0KONVx+gnMFP/hP8yk1bOLKnpE="
+          "hash": "iDgxfsWiJ7dn4RioQg5K8YDUxTFAonICbeSFzZU2WUM="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.DisplayScalingChangedEventArgs.html",
-          "hash": "cBpqdSgdcLRUIVShdv93Ohi0jgKJuvCpDOcC9/5ahK8="
+          "hash": "BRVHd6q3S4ab+/MPCF75+C64abZshfL0X+gNgS3AsiQ="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.FocusedWindowChangedEventArgs.html",
-          "hash": "GnCm4fOkH/EEzY48OU9nCR68G5tUMs+nC+1odYmYC+E="
+          "hash": "xTX/ySpH3+B2hgiLle2KIfhdSpjp225jQ8k3E1gMkBU="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IDisplay.html",
-          "hash": "+itcr7R/mw2YW4+11xsqRWTNbdH71hZn8ClvZVR/7Rc="
+          "hash": "FK/EwmsiOtrttS56iqgCvHV9L+8UC2OPGnGMQD4BEAk="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IDisplayManager.html",
-          "hash": "BFIsaxipKuxJTznv4rGMveksrsIOSgvMa+ipuH+A6wU="
+          "hash": "Azq31bpmmO0rU8fNLu9/SLlChKl2iME7lDOhPj4C8to="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IPropertyChangedEventArgs.html",
-          "hash": "bWMF9o1kmDgwBrY8YseUsESN/eW7A5Pvxbt98CdKfkw="
+          "hash": "+MnTVoxPeeE3gWOOk2pqBNWBzQpV849IltwQHBHCIEA="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IVirtualDesktop.html",
-          "hash": "9k/JVKL1sQyHI/usV7pQ6lswcKgq4WZPwlC4ISEZhhU="
+          "hash": "mlCcIKFwvegRkq31tfpFLeSRjouEKZ4CYj8VQMTe3V0="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IVirtualDesktopManager.html",
-          "hash": "fxX+uGDRgcTjQkYVth/intaVRvvmwnC2q2WK34DKRK0="
+          "hash": "B/Vl7tI4Yw3xZ4LmEI6c55WsYeDdLb3Vy+EkV9ndYSE="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IWindow.html",
-          "hash": "3mL1ljJPlN7zKtRsjyMd3QzclSRTLL5SRAj5SgST9gU="
+          "hash": "gf9KOrpzr5uR8QV7B+GTk5YBsOPa7eMe2f7iL6/v26Y="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.IWorkspace.html",
-          "hash": "Vm1rOJqfkX5s/r30j8ThG93/g1zh/FLU9ZaN9/uYVtU="
+          "hash": "Q9wmBERRYVFWQCw50PUahnGo5IolIcQhPbdh/sGxItg="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.InvalidDisplayReferenceException.html",
-          "hash": "Sp5I2msLPCjaWHTe+zQUzZE+0ssnks4KfPEKgu10QUg="
+          "hash": "gSvv7A0V0/0aHDWj0JAWhRi/+NEYsciNo6cVliddGmk="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.InvalidReferenceException.html",
-          "hash": "nsd96Ruf38BRJIqs+pOzaBM2b1c6xpLfQoCy/XKE4OE="
+          "hash": "T39yrRZe0lAlzdDnZ4Gr42a14KrDK4rpff7Sph62Ceg="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.InvalidVirtualDesktopReferenceException.html",
-          "hash": "dfp/4i4TXYfTOs1zS8uZ24Df4uL2uRT2IpccVSyGPQo="
+          "hash": "bPuibsbyRNZu3JXM6hc9d0Oe/fxs6XnyPGMmoGEdIo4="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.InvalidWindowReferenceException.html",
-          "hash": "XHgG8LrjQK3e3tB7jYUUII8VK0dCb6/XpKTkN9rXYSY="
+          "hash": "/lXnMyvtlWLVwd50t35KKLYdylZ3DpHWdBHHp7TU3mE="
         }
       },
       "is_incremental": false,
@@ -234,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.Point.html",
-          "hash": "MGKUALHk+y/9eQvQecPf1C6OAW6JvEF7+ly2uEKcHrI="
+          "hash": "opgZ8OnYEC1d//NLxxIE/a/C8H7JCgjePArdWb55xA8="
         }
       },
       "is_incremental": false,
@@ -246,7 +246,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.PrimaryDisplayChangedEventArgs.html",
-          "hash": "2PPDjZt/CXCCSA5prZQdDQWvHHhmin3snn7xB5nNBE4="
+          "hash": "d8qpgRg50P8lkq6y8WMeJ/DPr/GuIfB/wUavCkFgUE4="
         }
       },
       "is_incremental": false,
@@ -258,7 +258,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.PropertyChangedEventArgsBase-2.html",
-          "hash": "rf5ZYo76XvUzN+5kvfktGW5VuaFMGkhEx/vqoOiSdaI="
+          "hash": "WWV47UMQ6dbhV0Ogi2qm+EnhGIlrseFvPtQWoxLv7ck="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.Rectangle.html",
-          "hash": "16nfOcv5Qb/3wZUMZNY6ZssHX7ANc7grG5AU2N/HsiY="
+          "hash": "/u0+aSn4huTNXDxsCZtDRGndmaQMCbtllqdGQEBPz5E="
         }
       },
       "is_incremental": false,
@@ -282,7 +282,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowChangedEventArgs.html",
-          "hash": "xJipnbAK2LZty8xZBJJvtT/uhTiGcfrKpt88VwagR3Y="
+          "hash": "i15eUwqau2KTewFOt8i8i1AyT8OsTLh5XAp7G9G0Lu4="
         }
       },
       "is_incremental": false,
@@ -294,7 +294,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowFocusChangedEventArgs.html",
-          "hash": "3QuORTdzcEJmY69qxN+PKniV+isZBeXinCWl/8E1Vg8="
+          "hash": "NBE4iKrLbbbpVN3P6MTaRv+XkTn71sr5zEuopnNtNi8="
         }
       },
       "is_incremental": false,
@@ -306,7 +306,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowPositionChangedEventArgs.html",
-          "hash": "tQsS2YzUMz5O5REDC58lWKYegRl8doImzBB2lMgm0Qk="
+          "hash": "3svRr+ysFeBYYsSL/ZMlZTwMbrOCY34VgyEKxIKLPWc="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowState.html",
-          "hash": "nu0E4L3stXVo6jx9F9S+pY9cPMCcww0e46fwUy5x7CI="
+          "hash": "QgIGpOtbVPFqkDvFIBMa2J/coZLldIyhmLyJFYRm7uA="
         }
       },
       "is_incremental": false,
@@ -330,7 +330,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowStateChangedEventArgs.html",
-          "hash": "dvZkEiWHqY204uL5soUrh5sxerv/I71+iz+3f/W+ZyQ="
+          "hash": "kIw5BrtJoM/VLgxomvchILxF6uoEj1RzRGOfp/iu2uo="
         }
       },
       "is_incremental": false,
@@ -342,7 +342,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowTitleChangedEventArgs.html",
-          "hash": "Gk8FAIlDY3Lp9HOgY4U/oZCjt2tkbsHK9zekiZWBJxY="
+          "hash": "MCHtVHIgjJiUS7+HpwkGYzXNmuO0sex/orgUyqXkZ80="
         }
       },
       "is_incremental": false,
@@ -354,7 +354,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WindowTopmostChangedEventArgs.html",
-          "hash": "YzkW+aktGsMU1O0Ag0tuU/Q07/z8VAR35xV+QpgZ6vI="
+          "hash": "8veBRRuP3y5o+S4xZhk0TjpYgeu++mjq8Dw/78926zs="
         }
       },
       "is_incremental": false,
@@ -366,7 +366,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.WorkspaceExtensions.html",
-          "hash": "K6s68pAs3LVUfhTTw8ofH66XrTy/VuKTS23Wsp9vVVU="
+          "hash": "cRLmx72Pt2lo1yt1U1WPTbVvUE0G+RtZQ56eqSz1k3U="
         }
       },
       "is_incremental": false,
@@ -378,7 +378,7 @@
       "output": {
         ".html": {
           "relative_path": "WinMan.html",
-          "hash": "6QtyLPNeq1DbAjGV9lNPnvWhSMiTRdwgeKU3Swy8GQc="
+          "hash": "bajfKdnkBotxg9pGlGKAYCi8MXNUSE/I+FrB52lkMyk="
         }
       },
       "is_incremental": false,
