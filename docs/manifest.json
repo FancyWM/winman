@@ -1,0 +1,443 @@
+{
+  "homepages": [],
+  "source_base_path": "Z:/Development/source/repos/WinManRoot/WinMan/src/WinMan",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.CurrentDesktopChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.CurrentDesktopChangedEventArgs.html",
+          "hash": "3NLtNfEnPVX0ckzKbu/vTLJox958bHRFXcNlTkGxgIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.CursorLocationChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.CursorLocationChangedEventArgs.html",
+          "hash": "uOmCXX2RyGZan/iOFmIm+ShaDoGyV0ndptFmIyDDHCA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.DesktopChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.DesktopChangedEventArgs.html",
+          "hash": "QYI85Ux89Y6uFru1zp/rJvbYLXbcVHPLL3Bu1Uln/H4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.DisplayChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.DisplayChangedEventArgs.html",
+          "hash": "BhnguWtDQ1TrM4QSxVKjWP6fNGJ8v1NnwGJ+aFmBbUw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.DisplayRectangleChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.DisplayRectangleChangedEventArgs.html",
+          "hash": "Ic/wnAhODC8TVeUNy0KONVx+gnMFP/hP8yk1bOLKnpE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.DisplayScalingChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.DisplayScalingChangedEventArgs.html",
+          "hash": "cBpqdSgdcLRUIVShdv93Ohi0jgKJuvCpDOcC9/5ahK8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.FocusedWindowChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.FocusedWindowChangedEventArgs.html",
+          "hash": "GnCm4fOkH/EEzY48OU9nCR68G5tUMs+nC+1odYmYC+E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IDisplay.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IDisplay.html",
+          "hash": "+itcr7R/mw2YW4+11xsqRWTNbdH71hZn8ClvZVR/7Rc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IDisplayManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IDisplayManager.html",
+          "hash": "BFIsaxipKuxJTznv4rGMveksrsIOSgvMa+ipuH+A6wU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IPropertyChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IPropertyChangedEventArgs.html",
+          "hash": "bWMF9o1kmDgwBrY8YseUsESN/eW7A5Pvxbt98CdKfkw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IVirtualDesktop.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IVirtualDesktop.html",
+          "hash": "9k/JVKL1sQyHI/usV7pQ6lswcKgq4WZPwlC4ISEZhhU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IVirtualDesktopManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IVirtualDesktopManager.html",
+          "hash": "fxX+uGDRgcTjQkYVth/intaVRvvmwnC2q2WK34DKRK0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IWindow.html",
+          "hash": "3mL1ljJPlN7zKtRsjyMd3QzclSRTLL5SRAj5SgST9gU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.IWorkspace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.IWorkspace.html",
+          "hash": "Vm1rOJqfkX5s/r30j8ThG93/g1zh/FLU9ZaN9/uYVtU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.InvalidDisplayReferenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.InvalidDisplayReferenceException.html",
+          "hash": "Sp5I2msLPCjaWHTe+zQUzZE+0ssnks4KfPEKgu10QUg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.InvalidReferenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.InvalidReferenceException.html",
+          "hash": "nsd96Ruf38BRJIqs+pOzaBM2b1c6xpLfQoCy/XKE4OE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.InvalidVirtualDesktopReferenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.InvalidVirtualDesktopReferenceException.html",
+          "hash": "dfp/4i4TXYfTOs1zS8uZ24Df4uL2uRT2IpccVSyGPQo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.InvalidWindowReferenceException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.InvalidWindowReferenceException.html",
+          "hash": "XHgG8LrjQK3e3tB7jYUUII8VK0dCb6/XpKTkN9rXYSY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.Point.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.Point.html",
+          "hash": "MGKUALHk+y/9eQvQecPf1C6OAW6JvEF7+ly2uEKcHrI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.PrimaryDisplayChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.PrimaryDisplayChangedEventArgs.html",
+          "hash": "2PPDjZt/CXCCSA5prZQdDQWvHHhmin3snn7xB5nNBE4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.PropertyChangedEventArgsBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.PropertyChangedEventArgsBase-2.html",
+          "hash": "rf5ZYo76XvUzN+5kvfktGW5VuaFMGkhEx/vqoOiSdaI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.Rectangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.Rectangle.html",
+          "hash": "16nfOcv5Qb/3wZUMZNY6ZssHX7ANc7grG5AU2N/HsiY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowChangedEventArgs.html",
+          "hash": "xJipnbAK2LZty8xZBJJvtT/uhTiGcfrKpt88VwagR3Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowFocusChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowFocusChangedEventArgs.html",
+          "hash": "3QuORTdzcEJmY69qxN+PKniV+isZBeXinCWl/8E1Vg8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowPositionChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowPositionChangedEventArgs.html",
+          "hash": "tQsS2YzUMz5O5REDC58lWKYegRl8doImzBB2lMgm0Qk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowState.html",
+          "hash": "nu0E4L3stXVo6jx9F9S+pY9cPMCcww0e46fwUy5x7CI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowStateChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowStateChangedEventArgs.html",
+          "hash": "dvZkEiWHqY204uL5soUrh5sxerv/I71+iz+3f/W+ZyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowTitleChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowTitleChangedEventArgs.html",
+          "hash": "Gk8FAIlDY3Lp9HOgY4U/oZCjt2tkbsHK9zekiZWBJxY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WindowTopmostChangedEventArgs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WindowTopmostChangedEventArgs.html",
+          "hash": "YzkW+aktGsMU1O0Ag0tuU/Q07/z8VAR35xV+QpgZ6vI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.WorkspaceExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.WorkspaceExtensions.html",
+          "hash": "K6s68pAs3LVUfhTTw8ofH66XrTy/VuKTS23Wsp9vVVU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "../../obj/docfx/WinMan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "WinMan.html",
+          "hash": "6QtyLPNeq1DbAjGV9lNPnvWhSMiTRdwgeKU3Swy8GQc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "../../obj/docfx/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "YJFHeiwE5t11/MVfvjiZ3L6fjuUOlK3gJMTKqB01nLo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ForceRebuild"
+      },
+      "processors": {
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 31,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

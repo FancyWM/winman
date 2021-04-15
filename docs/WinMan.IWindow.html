@@ -1,0 +1,1666 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Interface IWindow
+   | WinMan Docs </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Interface IWindow
+   | WinMan Docs ">
+    <meta name="generator" content="docfx 2.57.2.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="WinMan.IWindow">
+  
+  
+  <h1 id="WinMan_IWindow" data-uid="WinMan.IWindow" class="text-break">Interface IWindow
+  </h1>
+  <div class="markdown level0 summary"><p>Used to interact with OS windows.
+All values returned by properties of <a class="xref" href="WinMan.IWindow.html">IWindow</a>
+represent real (unscaled by DPI settings) values.</p>
+<p>All operations can throw <a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a> at any time. 
+Your code should be able to handle this gracefully.</p>
+<p>All property reads return default but valid values once the window is dead and never
+throw <a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.IEquatable&lt;WinMan.IWindow&gt;.Equals(WinMan.IWindow)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="WinMan.html">WinMan</a></h6>
+  <h6><strong>Assembly</strong>: WinMan.dll</h6>
+  <h5 id="WinMan_IWindow_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IWindow : IEquatable&lt;IWindow&gt;</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanClose.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanClose%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L168">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanClose_" data-uid="WinMan.IWindow.CanClose*"></a>
+  <h4 id="WinMan_IWindow_CanClose" data-uid="WinMan.IWindow.CanClose">CanClose</h4>
+  <div class="markdown level1 summary"><p>True if the window can be closed by the current process.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanClose { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanMaximize.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanMaximize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L164">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanMaximize_" data-uid="WinMan.IWindow.CanMaximize*"></a>
+  <h4 id="WinMan_IWindow_CanMaximize" data-uid="WinMan.IWindow.CanMaximize">CanMaximize</h4>
+  <div class="markdown level1 summary"><p>True if the window supports maximization.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanMaximize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanMinimize.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanMinimize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L159">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanMinimize_" data-uid="WinMan.IWindow.CanMinimize*"></a>
+  <h4 id="WinMan_IWindow_CanMinimize" data-uid="WinMan.IWindow.CanMinimize">CanMinimize</h4>
+  <div class="markdown level1 summary"><p>True if the window supports minimization.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanMinimize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanMove.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanMove%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L150">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanMove_" data-uid="WinMan.IWindow.CanMove*"></a>
+  <h4 id="WinMan_IWindow_CanMove" data-uid="WinMan.IWindow.CanMove">CanMove</h4>
+  <div class="markdown level1 summary"><p>True if the window can be moved.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanMove { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanReorder.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanReorder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L154">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanReorder_" data-uid="WinMan.IWindow.CanReorder*"></a>
+  <h4 id="WinMan_IWindow_CanReorder" data-uid="WinMan.IWindow.CanReorder">CanReorder</h4>
+  <div class="markdown level1 summary"><p>True if the window can be reordered in the visual hierarchy.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanReorder { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_CanResize.md&amp;value=---%0Auid%3A%20WinMan.IWindow.CanResize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L145">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_CanResize_" data-uid="WinMan.IWindow.CanResize*"></a>
+  <h4 id="WinMan_IWindow_CanResize" data-uid="WinMan.IWindow.CanResize">CanResize</h4>
+  <div class="markdown level1 summary"><p>True if the window is resizable.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool CanResize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_FrameMargins.md&amp;value=---%0Auid%3A%20WinMan.IWindow.FrameMargins%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L139">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_FrameMargins_" data-uid="WinMan.IWindow.FrameMargins*"></a>
+  <h4 id="WinMan_IWindow_FrameMargins" data-uid="WinMan.IWindow.FrameMargins">FrameMargins</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Rectangle FrameMargins { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.Rectangle.html">Rectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Handle.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Handle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L191">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_Handle_" data-uid="WinMan.IWindow.Handle*"></a>
+  <h4 id="WinMan_IWindow_Handle" data-uid="WinMan.IWindow.Handle">Handle</h4>
+  <div class="markdown level1 summary"><p>The OS-specific window handle.
+Returns IntPtr.Zero once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IntPtr Handle { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_IsAlive.md&amp;value=---%0Auid%3A%20WinMan.IWindow.IsAlive%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L186">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_IsAlive_" data-uid="WinMan.IWindow.IsAlive*"></a>
+  <h4 id="WinMan_IWindow_IsAlive" data-uid="WinMan.IWindow.IsAlive">IsAlive</h4>
+  <div class="markdown level1 summary"><p>Is the window instance alive.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsAlive { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_IsFocused.md&amp;value=---%0Auid%3A%20WinMan.IWindow.IsFocused%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L182">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_IsFocused_" data-uid="WinMan.IWindow.IsFocused*"></a>
+  <h4 id="WinMan_IWindow_IsFocused" data-uid="WinMan.IWindow.IsFocused">IsFocused</h4>
+  <div class="markdown level1 summary"><p>Is this the foreground window.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsFocused { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_IsTopmost.md&amp;value=---%0Auid%3A%20WinMan.IWindow.IsTopmost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L175">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_IsTopmost_" data-uid="WinMan.IWindow.IsTopmost*"></a>
+  <h4 id="WinMan_IWindow_IsTopmost" data-uid="WinMan.IWindow.IsTopmost">IsTopmost</h4>
+  <div class="markdown level1 summary"><p>True if the window is always drawn above other non-topmost windows.
+Returns false once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">bool IsTopmost { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_MaxSize.md&amp;value=---%0Auid%3A%20WinMan.IWindow.MaxSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L137">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_MaxSize_" data-uid="WinMan.IWindow.MaxSize*"></a>
+  <h4 id="WinMan_IWindow_MaxSize" data-uid="WinMan.IWindow.MaxSize">MaxSize</h4>
+  <div class="markdown level1 summary"><p>The maxmimum allowed size for this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point? MaxSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="WinMan.Point.html">Point</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_MinSize.md&amp;value=---%0Auid%3A%20WinMan.IWindow.MinSize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L132">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_MinSize_" data-uid="WinMan.IWindow.MinSize*"></a>
+  <h4 id="WinMan_IWindow_MinSize" data-uid="WinMan.IWindow.MinSize">MinSize</h4>
+  <div class="markdown level1 summary"><p>The minimum allowed size for this window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Point? MinSize { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="WinMan.Point.html">Point</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Position.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Position%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L120">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_Position_" data-uid="WinMan.IWindow.Position*"></a>
+  <h4 id="WinMan_IWindow_Position" data-uid="WinMan.IWindow.Position">Position</h4>
+  <div class="markdown level1 summary"><p>The client rectangle of the window, relative to the workarea.
+Returns Rectangle.Empty once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Rectangle Position { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.Rectangle.html">Rectangle</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_State.md&amp;value=---%0Auid%3A%20WinMan.IWindow.State%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L127">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_State_" data-uid="WinMan.IWindow.State*"></a>
+  <h4 id="WinMan_IWindow_State" data-uid="WinMan.IWindow.State">State</h4>
+  <div class="markdown level1 summary"><p>The current state of the window.
+Returns WindowState.Minimized once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">WindowState State { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.WindowState.html">WindowState</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.InvalidOperationException</span></td>
+        <td><p>If the window cannot be changed to that state due to other reasons.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_SyncRoot.md&amp;value=---%0Auid%3A%20WinMan.IWindow.SyncRoot%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L102">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_SyncRoot_" data-uid="WinMan.IWindow.SyncRoot*"></a>
+  <h4 id="WinMan_IWindow_SyncRoot" data-uid="WinMan.IWindow.SyncRoot">SyncRoot</h4>
+  <div class="markdown level1 summary"><p>The internal synchronisation object.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object SyncRoot { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Title.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Title%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L114">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_Title_" data-uid="WinMan.IWindow.Title*"></a>
+  <h4 id="WinMan_IWindow_Title" data-uid="WinMan.IWindow.Title">Title</h4>
+  <div class="markdown level1 summary"><p>The title of the window.
+Returns string.Empty once the window is dead (IsAlive=false).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">string Title { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Workspace.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Workspace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L107">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_Workspace_" data-uid="WinMan.IWindow.Workspace*"></a>
+  <h4 id="WinMan_IWindow_Workspace" data-uid="WinMan.IWindow.Workspace">Workspace</h4>
+  <div class="markdown level1 summary"><p>The IWorkspace which returned this IWindow instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWorkspace Workspace { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.IWorkspace.html">IWorkspace</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_BringToFront.md&amp;value=---%0Auid%3A%20WinMan.IWindow.BringToFront%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L263">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_BringToFront_" data-uid="WinMan.IWindow.BringToFront*"></a>
+  <h4 id="WinMan_IWindow_BringToFront" data-uid="WinMan.IWindow.BringToFront">BringToFront()</h4>
+  <div class="markdown level1 summary"><p>Positions the window in front of all other non-topmost windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void BringToFront()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Close.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Close%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L219">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_Close_" data-uid="WinMan.IWindow.Close*"></a>
+  <h4 id="WinMan_IWindow_Close" data-uid="WinMan.IWindow.Close">Close()</h4>
+  <div class="markdown level1 summary"><p>Sends a close event to the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void Close()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_GetNextWindow.md&amp;value=---%0Auid%3A%20WinMan.IWindow.GetNextWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L212">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_GetNextWindow_" data-uid="WinMan.IWindow.GetNextWindow*"></a>
+  <h4 id="WinMan_IWindow_GetNextWindow" data-uid="WinMan.IWindow.GetNextWindow">GetNextWindow()</h4>
+  <div class="markdown level1 summary"><p>Gets the next window in the workspace. The previous window is the window below this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWindow GetNextWindow()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.IWindow.html">IWindow</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_GetPreviousWindow.md&amp;value=---%0Auid%3A%20WinMan.IWindow.GetPreviousWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L205">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_GetPreviousWindow_" data-uid="WinMan.IWindow.GetPreviousWindow*"></a>
+  <h4 id="WinMan_IWindow_GetPreviousWindow" data-uid="WinMan.IWindow.GetPreviousWindow">GetPreviousWindow()</h4>
+  <div class="markdown level1 summary"><p>Gets the previous window in the workspace. The previous window is the window above this one.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IWindow GetPreviousWindow()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.IWindow.html">IWindow</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_GetProcess.md&amp;value=---%0Auid%3A%20WinMan.IWindow.GetProcess%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L198">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_GetProcess_" data-uid="WinMan.IWindow.GetProcess*"></a>
+  <h4 id="WinMan_IWindow_GetProcess" data-uid="WinMan.IWindow.GetProcess">GetProcess()</h4>
+  <div class="markdown level1 summary"><p>Returns the process the window belongs to.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">Process GetProcess()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Diagnostics.Process</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_InsertAfter_WinMan_IWindow_.md&amp;value=---%0Auid%3A%20WinMan.IWindow.InsertAfter(WinMan.IWindow)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L249">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_InsertAfter_" data-uid="WinMan.IWindow.InsertAfter*"></a>
+  <h4 id="WinMan_IWindow_InsertAfter_WinMan_IWindow_" data-uid="WinMan.IWindow.InsertAfter(WinMan.IWindow)">InsertAfter(IWindow)</h4>
+  <div class="markdown level1 summary"><p>Moves the current window to be positioned after the given one in the z-order.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void InsertAfter(IWindow other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.IWindow.html">IWindow</a></td>
+        <td><span class="parametername">other</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_RequestFocus.md&amp;value=---%0Auid%3A%20WinMan.IWindow.RequestFocus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L270">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_RequestFocus_" data-uid="WinMan.IWindow.RequestFocus*"></a>
+  <h4 id="WinMan_IWindow_RequestFocus" data-uid="WinMan.IWindow.RequestFocus">RequestFocus()</h4>
+  <div class="markdown level1 summary"><p>Activates the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void RequestFocus()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_SendToBack.md&amp;value=---%0Auid%3A%20WinMan.IWindow.SendToBack%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L256">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_SendToBack_" data-uid="WinMan.IWindow.SendToBack*"></a>
+  <h4 id="WinMan_IWindow_SendToBack" data-uid="WinMan.IWindow.SendToBack">SendToBack()</h4>
+  <div class="markdown level1 summary"><p>Positions the window behind all other non-topmost windows.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SendToBack()</code></pre>
+  </div>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_SetPosition_WinMan_Rectangle_.md&amp;value=---%0Auid%3A%20WinMan.IWindow.SetPosition(WinMan.Rectangle)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L227">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_SetPosition_" data-uid="WinMan.IWindow.SetPosition*"></a>
+  <h4 id="WinMan_IWindow_SetPosition_WinMan_Rectangle_" data-uid="WinMan.IWindow.SetPosition(WinMan.Rectangle)">SetPosition(Rectangle)</h4>
+  <div class="markdown level1 summary"><p>Changes the location of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetPosition(Rectangle newLocation)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.Rectangle.html">Rectangle</a></td>
+        <td><span class="parametername">newLocation</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_SetState_WinMan_WindowState_.md&amp;value=---%0Auid%3A%20WinMan.IWindow.SetState(WinMan.WindowState)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L234">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_SetState_" data-uid="WinMan.IWindow.SetState*"></a>
+  <h4 id="WinMan_IWindow_SetState_WinMan_WindowState_" data-uid="WinMan.IWindow.SetState(WinMan.WindowState)">SetState(WindowState)</h4>
+  <div class="markdown level1 summary"><p>Changes the state of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetState(WindowState state)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.WindowState.html">WindowState</a></td>
+        <td><span class="parametername">state</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_SetTopmost_System_Boolean_.md&amp;value=---%0Auid%3A%20WinMan.IWindow.SetTopmost(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L241">View Source</a>
+  </span>
+  <a id="WinMan_IWindow_SetTopmost_" data-uid="WinMan.IWindow.SetTopmost*"></a>
+  <h4 id="WinMan_IWindow_SetTopmost_System_Boolean_" data-uid="WinMan.IWindow.SetTopmost(System.Boolean)">SetTopmost(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Changes the topmost property of the window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">void SetTopmost(bool topmost)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">topmost</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="exceptions">Exceptions</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Condition</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="WinMan.InvalidWindowReferenceException.html">InvalidWindowReferenceException</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Runtime.InteropServices.ExternalException</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="events">Events
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Added.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Added%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L80">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_Added" data-uid="WinMan.IWindow.Added">Added</h4>
+  <div class="markdown level1 summary"><p>The window was added to the workspace.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowChangedEventArgs&gt; Added</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowChangedEventArgs.html">WindowChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Destroyed.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Destroyed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L92">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_Destroyed" data-uid="WinMan.IWindow.Destroyed">Destroyed</h4>
+  <div class="markdown level1 summary"><p>The window instance was destroyed.
+IsAlive will be false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowChangedEventArgs&gt; Destroyed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowChangedEventArgs.html">WindowChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_GotFocus.md&amp;value=---%0Auid%3A%20WinMan.IWindow.GotFocus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L70">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_GotFocus" data-uid="WinMan.IWindow.GotFocus">GotFocus</h4>
+  <div class="markdown level1 summary"><p>The window became the foreground window.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowFocusChangedEventArgs&gt; GotFocus</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowFocusChangedEventArgs.html">WindowFocusChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_LostFocus.md&amp;value=---%0Auid%3A%20WinMan.IWindow.LostFocus%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L75">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_LostFocus" data-uid="WinMan.IWindow.LostFocus">LostFocus</h4>
+  <div class="markdown level1 summary"><p>The window lost focus.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowFocusChangedEventArgs&gt; LostFocus</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowFocusChangedEventArgs.html">WindowFocusChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_PositionChanged.md&amp;value=---%0Auid%3A%20WinMan.IWindow.PositionChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L55">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_PositionChanged" data-uid="WinMan.IWindow.PositionChanged">PositionChanged</h4>
+  <div class="markdown level1 summary"><p>The position of the window has changed. This might be due to a user interaction
+or through some form of scripted behaviour. </p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowPositionChangedEventArgs&gt; PositionChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowPositionChangedEventArgs.html">WindowPositionChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_PositionChangeEnd.md&amp;value=---%0Auid%3A%20WinMan.IWindow.PositionChangeEnd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L49">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_PositionChangeEnd" data-uid="WinMan.IWindow.PositionChangeEnd">PositionChangeEnd</h4>
+  <div class="markdown level1 summary"><p>Event emitted when the user interaction driving the resize or move of 
+the window ends.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowPositionChangedEventArgs&gt; PositionChangeEnd</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowPositionChangedEventArgs.html">WindowPositionChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_PositionChangeStart.md&amp;value=---%0Auid%3A%20WinMan.IWindow.PositionChangeStart%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L43">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_PositionChangeStart" data-uid="WinMan.IWindow.PositionChangeStart">PositionChangeStart</h4>
+  <div class="markdown level1 summary"><p>Event emitted when the window position starts changing as a result of 
+user interaction (resize or move).</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowPositionChangedEventArgs&gt; PositionChangeStart</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowPositionChangedEventArgs.html">WindowPositionChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_Removed.md&amp;value=---%0Auid%3A%20WinMan.IWindow.Removed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L86">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_Removed" data-uid="WinMan.IWindow.Removed">Removed</h4>
+  <div class="markdown level1 summary"><p>The window was removed from the workspace.
+IsAlive is likely to be false.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowChangedEventArgs&gt; Removed</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowChangedEventArgs.html">WindowChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_StateChanged.md&amp;value=---%0Auid%3A%20WinMan.IWindow.StateChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L60">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_StateChanged" data-uid="WinMan.IWindow.StateChanged">StateChanged</h4>
+  <div class="markdown level1 summary"><p>The state of the window has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowStateChangedEventArgs&gt; StateChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowStateChangedEventArgs.html">WindowStateChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_TitleChanged.md&amp;value=---%0Auid%3A%20WinMan.IWindow.TitleChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L97">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_TitleChanged" data-uid="WinMan.IWindow.TitleChanged">TitleChanged</h4>
+  <div class="markdown level1 summary"><p>The title of the window has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowTitleChangedEventArgs&gt; TitleChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowTitleChangedEventArgs.html">WindowTitleChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow_TopmostChanged.md&amp;value=---%0Auid%3A%20WinMan.IWindow.TopmostChanged%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L65">View Source</a>
+  </span>
+  <h4 id="WinMan_IWindow_TopmostChanged" data-uid="WinMan.IWindow.TopmostChanged">TopmostChanged</h4>
+  <div class="markdown level1 summary"><p>The IsTopmost property of the window has changed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">event EventHandler&lt;WindowTopmostChangedEventArgs&gt; TopmostChanged</code></pre>
+  </div>
+  <h5 class="eventType">Event Type</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.EventHandler</span>&lt;<a class="xref" href="WinMan.WindowTopmostChangedEventArgs.html">WindowTopmostChangedEventArgs</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/veselink1/winman/new/master/apiSpec/new?filename=WinMan_IWindow.md&amp;value=---%0Auid%3A%20WinMan.IWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/veselink1/winman/blob/master/src/WinMan/IWindow.cs/#L37" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
