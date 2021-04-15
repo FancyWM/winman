@@ -2,6 +2,9 @@
 
 namespace WinMan
 {
+    /// <summary>
+    /// Represents a point in screen-space coordinates.
+    /// </summary>
     public struct Point : IEquatable<Point>
     {
         public readonly int X;

@@ -2,6 +2,9 @@
 
 namespace WinMan
 {
+    /// <summary>
+    /// A rectangle in screen-space coordinates.
+    /// </summary>
     public struct Rectangle : IEquatable<Rectangle>
     {
         public static Rectangle Empty => new Rectangle();
