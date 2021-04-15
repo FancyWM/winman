@@ -25,9 +25,14 @@
       "_gitContribute": {
         "repo": "https://github.com/veselink1/winman",
         "branch": "master"
-      }
+      },
+      "_enableSearch": "true"
     },
-    "dest": "../../docs",
-    "template": "default"
+    "postProcessors": ["ExtractSearchIndex"],
+    "template": [
+      "default",
+      "../../docfx/templates/material/material"
+    ],
+    "dest": "../../docs"
   }
 }
