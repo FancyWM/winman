@@ -27,6 +27,11 @@ namespace WinMan
         /// </summary>
         event EventHandler<DisplayScalingChangedEventArgs>? ScalingChanged;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        event EventHandler<DisplayRefreshRateChangedEventArgs?> RefreshRateChanged;
+
         IWorkspace Workspace { get; }
 
         /// <summary>
@@ -43,5 +48,10 @@ namespace WinMan
         /// The current scaling factor assigned to this display.
         /// </summary>
         double Scaling { get; }
+
+        /// <summary>
+        /// The current refresh rate of the display.
+        /// </summary>
+        int RefreshRate { get; }
     }
 }

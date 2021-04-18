@@ -387,6 +387,35 @@ namespace WinMan
         }
     }
 
+    public class DisplayRefreshRateChangedEventArgs : DisplayChangedEventArgs
+    {
+        public int NewRefreshRate { get; }
+        public int OldRefreshRate { get; }
+
+        public DisplayRefreshRateChangedEventArgs(IDisplay source, int newRefreshRate, int oldRefreshRate) : base(source)
+        {
+            NewRefreshRate = newRefreshRate;
+            OldRefreshRate = oldRefreshRate;
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is DisplayRefreshRateChangedEventArgs args &&
+                   EqualityComparer<IDisplay>.Default.Equals(Source, args.Source) &&
+                   NewRefreshRate == args.NewRefreshRate &&
+                   OldRefreshRate == args.OldRefreshRate;
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = 1968793037;
+            hashCode = hashCode * -1521134295 + EqualityComparer<IDisplay>.Default.GetHashCode(Source);
+            hashCode = hashCode * -1521134295 + NewRefreshRate.GetHashCode();
+            hashCode = hashCode * -1521134295 + OldRefreshRate.GetHashCode();
+            return hashCode;
+        }
+    }
+
     public class PrimaryDisplayChangedEventArgs : DisplayChangedEventArgs
     {
         public IDisplay NewPrimaryDisplay => Source;
