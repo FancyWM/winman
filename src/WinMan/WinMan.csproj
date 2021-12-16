@@ -4,13 +4,49 @@
     <TargetFramework>netstandard2.1</TargetFramework>
 
     <Nullable>enable</Nullable>
+
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+
+    <PackageProjectUrl>http://github.com/fancywm/winman</PackageProjectUrl>
+
+    <PackageIcon>Icon.png</PackageIcon>
+
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+
+    <RepositoryUrl>http://github.com/fancywm/winman</RepositoryUrl>
+
+    <RepositoryType>git</RepositoryType>
+
+    <PackageTags>win32 windows window management shell</PackageTags>
+
+    <Authors>FancyWM,veselink1</Authors>
+
+    <SignAssembly>False</SignAssembly>
+
+    <ProduceReferenceAssembly>True</ProduceReferenceAssembly>
+
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <Product>$(AssemblyName)</Product>
+
+    <PackageId>$(AssemblyName).Core</PackageId>
+
+    <AssemblyVersion></AssemblyVersion>
+
+    <Version>1.0.1</Version>
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="docfx.console" Version="2.57.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="C:\Users\Veselin\Desktop\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
