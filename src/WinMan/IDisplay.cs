@@ -30,7 +30,7 @@ namespace WinMan
         /// <summary>
         /// 
         /// </summary>
-        event EventHandler<DisplayRefreshRateChangedEventArgs?> RefreshRateChanged;
+        event EventHandler<DisplayRefreshRateChangedEventArgs>? RefreshRateChanged;
 
         IWorkspace Workspace { get; }
 
