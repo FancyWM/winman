@@ -223,6 +223,7 @@ namespace WinMan
         /// </summary>
         /// <param name="newLocation"></param>
         /// <exception cref="InvalidWindowReferenceException"></exception>
+        /// <exception cref="InvalidOperationException"></exception>
         /// <exception cref="ExternalException"></exception>
         void SetPosition(Rectangle newLocation);
         /// <summary>
@@ -267,6 +268,6 @@ namespace WinMan
         /// </summary>
         /// <exception cref="InvalidWindowReferenceException"></exception>
         /// <exception cref="ExternalException"></exception>
-        void RequestFocus();
+        bool RequestFocus();
     }
 }
