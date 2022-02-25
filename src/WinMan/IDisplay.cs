@@ -5,7 +5,7 @@ namespace WinMan
     /// <summary>
     /// Represents a display that is attached to the system and can contain windows.
     /// </summary>
-    public interface IDisplay
+    public interface IDisplay : IEquatable<IDisplay>
     {
         /// <summary>
         /// The display has been removed.
