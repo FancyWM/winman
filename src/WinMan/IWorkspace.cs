@@ -90,6 +90,11 @@ namespace WinMan
         IWindow? FindWindow(IntPtr windowHandle);
 
         /// <summary>
+        /// Retrieves the window that contains the specified point.
+        /// </summary>
+        IWindow? FindWindowFromPoint(Point pt);
+
+        /// <summary>
         /// Creates an <see cref="IWindow"/> instance for the corresponding handle.
         /// This instance may not compare equal to other <see cref="IWindow"/> references to the same OS window.
         /// Use this only for throaway instances where you need to read a certain property of the window.

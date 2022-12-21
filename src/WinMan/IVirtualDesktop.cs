@@ -15,6 +15,11 @@ namespace WinMan
         IWorkspace Workspace { get; }
 
         /// <summary>
+        /// Is the virtual desktop instance alive.
+        /// </summary>
+        bool IsAlive { get; }
+
+        /// <summary>
         /// Is this the current virtual desktop.
         /// </summary>
         bool IsCurrent { get; }
