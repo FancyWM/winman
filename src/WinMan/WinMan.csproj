@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-  
+
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
 
@@ -37,13 +37,13 @@
 
     <Version>1.0.1</Version>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
-    <None Include="C:\Users\Veselin\Desktop\Icon.png">
+    <None Include="..\..\Resources\Icon.png">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
