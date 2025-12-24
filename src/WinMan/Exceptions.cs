@@ -19,16 +19,29 @@ namespace WinMan
 
     public class InvalidDisplayReferenceException : InvalidReferenceException
     {
+        public string DeviceID { get; }
         public IntPtr Handle { get; }
 
+        public InvalidDisplayReferenceException(string deviceID)
+            : base($"The device {deviceID} is not available.")
+        {
+            DeviceID = deviceID;
+        }
+
+        public InvalidDisplayReferenceException(string deviceID, Exception innerException)
+            : base($"The device {deviceID} is not available.", innerException)
+        {
+            DeviceID = deviceID;
+        }
+
         public InvalidDisplayReferenceException(IntPtr handle)
-            : base($"The monitor previously identified by the handle 0x{handle.ToString("X8")} has been destroyed.")
+            : this($"0x{handle.ToString("X8")}")
         {
             Handle = handle;
         }
 
         public InvalidDisplayReferenceException(IntPtr handle, Exception innerException)
-            : base($"The monitor previously identified by the handle 0x{handle.ToString("X8")} has been destroyed.", innerException)
+            : this($"0x{handle.ToString("X8")}", innerException)
         {
             Handle = handle;
         }
